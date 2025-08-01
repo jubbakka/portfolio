@@ -2,14 +2,15 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { GlassCard } from "./ui/glass-card";
 
-function Footer () {
+function Footer() {
     return (
-        <footer className="py-8 px-4">
-            <GlassCard className="p-6">
+        <footer className="py-8 px-4 overflow-x-hidden">
+            <GlassCard className="p-6 overflow-hidden">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
                         className="text-white/70"
                     >
                         © 2025 Julien Gourmet. Tous droits réservés.
@@ -18,6 +19,7 @@ function Footer () {
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
                         className="flex space-x-4"
                     >
                         <motion.a
@@ -53,6 +55,6 @@ function Footer () {
             </GlassCard>
         </footer>
     );
-};
+}
 
 export default Footer;

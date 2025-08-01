@@ -12,7 +12,7 @@ function Footer () {
                         whileInView={{ opacity: 1 }}
                         className="text-white/70"
                     >
-                        © 2024 Mon Portfolio. Tous droits réservés.
+                        © 2025 Julien Gourmet. Tous droits réservés.
                     </motion.p>
 
                     <motion.div

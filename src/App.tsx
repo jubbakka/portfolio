@@ -11,11 +11,10 @@ import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
 
 import './App.css'
-
+import './i18n'; // Import your i18n configuration
 function App() {
 
     return (
-
         <BrowserRouter>
             <div className="min-h-screen bg-slate-900 dark:bg-gray-900 transition-colors duration-300">
                 <div

@@ -1,21 +1,16 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+// src/i18n.ts
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-import translationFR from './locales/fr/translation.json';
-import translationEN from './locales/en/translation.json';
-import translationDE from './locales/de/translation.json';
+import translationFR from "./locales/fr/translation.json";
+import translationEN from "./locales/en/translation.json";
+import translationDE from "./locales/de/translation.json";
 
 const resources = {
-    fr: {
-        translation: translationFR
-    },
-    en: {
-        translation: translationEN
-    },
-    de: {
-        translation: translationDE
-    }
+    fr: { translation: translationFR },
+    en: { translation: translationEN },
+    de: { translation: translationDE },
 };
 
 i18n
@@ -23,10 +18,17 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: 'fr',
-        interpolation: {
-            escapeValue: false
-        }
+        fallbackLng: "fr",
+        supportedLngs: ["fr", "en", "de"],
+        nonExplicitSupportedLngs: true,
+        load: "languageOnly",
+        detection: {
+            order: ["localStorage", "htmlTag", "navigator"],
+            caches: ["localStorage"],
+            lookupLocalStorage: "lang", // ← aligne avec ton switcher
+        },
+        interpolation: { escapeValue: false },
+        react: { useSuspense: false },
     });
 
 export default i18n;

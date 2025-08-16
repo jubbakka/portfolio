@@ -1,3 +1,27 @@
 {
-
+  "home": {
+    "title": {
+      "part1": "Ingenieur",
+      "part2": "Fullstack"
+    },
+    "subtitle": "Ich liebe es, nützliche, durchdachte und effiziente Anwendungen zu entwerfen und zu entwickeln, indem ich moderne Technologien nutze.",
+    "buttons": {
+      "projects": "Meine Projekte ansehen",
+      "contact": "Mich kontaktieren"
+    }
+  },
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "projects": "Projekte",
+    "cv": "Lebenslauf",
+    "contact": "Kontakt",
+    "aria": {
+      "main": "Hauptnavigation",
+      "home": "Zur Startseite"
+    }
+  },
+  "footer": {
+    "copyright": "Alle Rechte vorbehalten."
+  }
 }

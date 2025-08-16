@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { GlassCard } from "./ui/glass-card";
+import { useTranslation } from "react-i18next";
+
 
 function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer className="py-8 px-4 overflow-x-hidden">
             <GlassCard className="p-6 overflow-hidden">
@@ -13,7 +17,9 @@ function Footer() {
                         viewport={{ once: true }}
                         className="text-white/70"
                     >
-                        © 2025 Julien Gourmet. Tous droits réservés.
+
+
+                        © 2025 Julien Gourmet. {t("footer.copyright")}
                     </motion.p>
 
                     <motion.div

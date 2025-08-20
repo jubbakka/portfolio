@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": {
+      "part1": "Ingénieur",
+      "part2": "Fullstack"
+    },
+    "subtitle": "J’aime concevoir et développer des applications utiles, soignées et efficaces, en tirant parti des technologies modernes.",
+    "buttons": {
+      "projects": "Voir mes projets",
+      "contact": "Me contacter"
+    }
+  },
+  "navbar": {
+    "home": "Acceuil",
+    "about": "A propos",
+    "projects": "Projets",
+    "cv": "CV",
+    "contact": "Contact",
+    "aria": {
+      "main": "Main navigation",
+      "home": "Go to homepage"
+    }
+  },
+  "footer": {
+    "copyright": "Tous droits réservés."
+  }
+}

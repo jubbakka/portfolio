@@ -1,17 +1,19 @@
 import {GlassCard} from "../components/ui/glass-card.tsx";
-import {Github, Linkedin, Mail} from "lucide-react"
+import {Github, Linkedin, Mail} from "lucide-react";
 import {motion} from "framer-motion";
 import {Link} from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function Home() {
+    const { t } = useTranslation();
+
     return (
         <motion.div
-
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 0.5}}
-            className="min-h-screen flex flex-col justify-center items-center px-4 pt-20">
-            {/* 1. Effet arrière-plan */}
+            className="min-h-screen flex flex-col justify-center items-center px-4 pt-20"
+        >
             <div className="fixed inset-0 pointer-events-none overflow-hidden opacity-15">
                 {[...Array(30)].map((_, i) => (
                     <motion.div
@@ -26,14 +28,13 @@ export function Home() {
                             ease: 'linear'
                         }}
                     >
-                        {'01010110100101'.split('').map(c => (
-                            <div className="opacity-50">{c}</div>
+                        {'01010110100101'.split('').map((c, idx) => (
+                            <div key={idx} className="opacity-50">{c}</div>
                         ))}
                     </motion.div>
                 ))}
             </div>
 
-            {/* 2. Contenu principal */}
             <motion.div
                 initial={{opacity: 0, scale: 0.8}}
                 animate={{opacity: 1, scale: 1}}
@@ -46,25 +47,26 @@ export function Home() {
                     animate={{opacity: 1, y: 0}}
                     transition={{delay: 0.3, duration: 1, type: "spring"}}
                 >
-
                     <motion.span
                         animate={{
                             textShadow: [
                                 "0 0 0px rgba(255,255,255,0)",
                                 "0 0 10px rgba(255,255,255,0.5)",
-                                "0 0 0px rgba(255,255,255,0)",]
+                                "0 0 0px rgba(255,255,255,0)",
+                            ]
                         }}
                         transition={{repeat: Infinity, duration: 2, delay: 1}}
-                    >Ingénieur
+                    >
+                        {t("home.title.part1")}
                     </motion.span>
                     <br/>
                     <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-
-                    <motion.span
-                        animate={{backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']}}
-                        transition={{repeat: Infinity, duration: 3}}
-                    >Fullstack
-                    </motion.span>
+                        <motion.span
+                            animate={{backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']}}
+                            transition={{repeat: Infinity, duration: 3}}
+                        >
+                            {t("home.title.part2")}
+                        </motion.span>
                     </span>
                 </motion.h1>
 
@@ -74,8 +76,7 @@ export function Home() {
                     animate={{opacity: 1, y: 0}}
                     transition={{delay: 0.5, duration: 1}}
                 >
-                    Passionné par le développement web et les technologies modernes, je crée des applications
-                    performantes et élégantes.
+                    {t("home.subtitle")}
                 </motion.p>
 
                 <motion.div
@@ -99,7 +100,7 @@ export function Home() {
                                 whileHover={{x: "100%"}}
                                 transition={{duration: 0.5}}
                             />
-                            <span className="relative z-10">Voir mes projets</span>
+                            <span className="relative z-10">{t("home.buttons.projects")}</span>
                         </motion.button>
                     </Link>
 
@@ -110,12 +111,13 @@ export function Home() {
                                 whileTap={{scale: 0.95}}
                                 className="text-white font-semibold text-lg cursor-pointer block"
                             >
-                                Me contacter
+                                {t("home.buttons.contact")}
                             </motion.span>
                         </GlassCard>
                     </Link>
                 </motion.div>
             </motion.div>
+
             <motion.div
                 className="flex justify-center space-x-6 mb-12"
                 initial={{opacity: 0, y: 20}}
@@ -139,9 +141,7 @@ export function Home() {
                         }}
                         whileTap={{scale: 0.9}}
                         className="text-white/70 hover:text-white transition-colors"
-                        animate={{
-                            y: [0, -5, 0],
-                        }}
+                        animate={{y: [0, -5, 0]}}
                         transition={{
                             repeat: Infinity,
                             duration: 2,
@@ -152,11 +152,8 @@ export function Home() {
                     </motion.a>
                 ))}
             </motion.div>
-
-
         </motion.div>
-    )
-        ;
+    );
 }
 
 export default Home;

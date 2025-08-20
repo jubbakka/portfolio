@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": {
+      "part1": "Engineer",
+      "part2": "Fullstack"
+    },
+    "subtitle": "I love designing and developing useful, polished, and efficient applications by leveraging modern technologies.",
+    "buttons": {
+      "projects": "View my projects",
+      "contact": "Contact me"
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "cv": "Resume",
+    "contact": "Contact",
+    "aria": {
+      "main": "Main navigation",
+      "home": "Go to homepage"
+    }
+  },
+  "footer": {
+    "copyright": "All right reserved."
+  }
+}

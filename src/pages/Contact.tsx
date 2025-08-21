@@ -1,5 +1,5 @@
 import {useTranslation} from "react-i18next";
-
+import {motion} from "framer-motion";
 import {Mail, Phone, MapPin} from "lucide-react";
 import {GlassCard} from "../components/ui/glass-card";
 
@@ -17,12 +17,14 @@ export default function Contact() {
                     </p>
                 </header>
             </section>
-            <section className="container mx-auto px-4 py-24">
+            <section className="container mx-auto px-4 py-10">
                 <div className="grid gap-8 md:grid-cols-2">
                     <GlassCard className="p-8 h-full">
                         <h3 className="text-2xl font-bold mb-8">{t("contact.getInTouch")}</h3>
                         <div className="space-y-6">
-                            <div className="flex items-center space-x-4">
+                            <motion.div
+                                whileHover={{x:10}}
+                                className="flex items-center space-x-4">
                                 <div className="w-12 h-12  rounded-2xl flex items-center justify-center">
                                     <Mail className="text-white" size={20}/>
                                 </div>
@@ -34,9 +36,11 @@ export default function Contact() {
                                         juliengourmetch@gmail.com
                                     </a>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="flex items-center space-x-4">
+                            <motion.div
+                                whileHover={{x:10}}
+                                className="flex items-center space-x-4">
                                 <div className="w-12 h-12  rounded-2xl flex items-center justify-center">
                                     <Phone className="text-white" size={20}/>
                                 </div>
@@ -48,24 +52,26 @@ export default function Contact() {
                                         +41 79 710 67 83
                                     </a>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="flex items-center space-x-4">
+                            <motion.div
+                                whileHover={{x:10}}
+                                className="flex items-center space-x-4">
                                 <div className="w-12 h-12  rounded-2xl flex items-center justify-center">
                                     <MapPin className="text-white" size={20}/>
                                 </div>
                                 <div>
                                     <p className="text-white font-medium"> {t('contact.info.location')}</p>
-                                    <a href="mailto:juliengourmetch@gmail.com"
-                                       className="text-white/70 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-transparent rounded">
+                                    <p
+                                       className="text-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-transparent rounded">
                                         {t('contact.info.address')}
-                                    </a>
+                                    </p>
                                 </div>
-                            </div>
+                            </motion.div>
 
                             <div className="mt-8 pt-8 border-t border-white/20">
                                 <p className="text-white/70 leading-relaxed">
-                                    {t("contact.disclaimer")}
+                                    {t("contact.description")}
                                 </p>
                             </div>
                         </div>

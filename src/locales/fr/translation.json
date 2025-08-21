@@ -26,6 +26,14 @@
   },
   "contact": {
     "title": "Contactez-moi !",
-    "subtitle": "N'hésitez pas à me contacter pour vos projets ou opportunités."
-    }
+    "subtitle": "N'hésitez pas à me contacter pour vos projets ou opportunités.",
+    "getInTouch": "Me contacter",
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "address": "Lausanne, Suisse"
+    },
+    "description": "Je suis toujours ouvert à de nouvelles opportunités et collaborations. Que vous ayez une question, un projet en tête ou simplement envie de discuter, n'hésitez pas à me contacter !"
+  }
 }

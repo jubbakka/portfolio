@@ -23,5 +23,9 @@
   },
   "footer": {
     "copyright": "Tous droits réservés."
-  }
+  },
+  "contact": {
+    "title": "Contactez-moi !",
+    "subtitle": "N'hésitez pas à me contacter pour vos projets ou opportunités."
+    }
 }

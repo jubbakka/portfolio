@@ -45,6 +45,7 @@
       "send": "Envoyer le message",
       "sending": "Envoi...",
       "sent": "Message envoyé",
+      "thankYou": "Merci pour votre message ! Je vous répondrai dès que possible.",
       "error": "Oups, réessaie plus tard."
     },
     "errors": {

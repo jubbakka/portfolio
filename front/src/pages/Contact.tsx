@@ -27,23 +27,18 @@ export default function Contact() {
     const onSubmit = async (data: ContactForm) => {
         try {
             // EmailJS - Env variables should be set in a .env file
-            await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                {
-                    from_name: data.name,
-                    from_email: data.email,
-                    message: data.message,
-                    to_name: import.meta.env.VITE_EMAILJS_TO_NAME,
-                },
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-            );
+            await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
 
             console.log("Email envoyé avec succès:");
 
             toast({
-                title: "Message envoyé !",
-                description: "Je vous répondrai dans les plus brefs délais.",
+                title: t("contact.form.sent"),
+                description: t("contact.form.thankYou"),
+                variant: "default",
             });
 
             reset();

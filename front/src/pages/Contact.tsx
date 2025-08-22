@@ -27,6 +27,8 @@ export default function Contact() {
 
     const onSubmit = async (data: ContactForm) => {
         try {
+            console.log("Envoi du formulaire avec les données:", data);
+            console.log("Envoi vers l'API:", `${API}/api/contact`);
             await fetch(`${API}/api/contact`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

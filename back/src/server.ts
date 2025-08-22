@@ -6,8 +6,10 @@ import cors from "cors";
 import rateLimit from "express-rate-limit";
 
 const app = express();
+app.set("trust proxy", 1);
 app.use(helmet());
 app.use(express.json({limit: "50kb"}));
+
 app.use(cors({origin: (process.env.CORS_ORIGIN ?? "http://localhost:5173").split(",")}));
 
 const contactLimiter = rateLimit({windowMs: 300_000, max: 5});

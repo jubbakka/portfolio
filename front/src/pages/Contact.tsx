@@ -2,7 +2,6 @@ import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
 import {useForm} from "react-hook-form";
 import {Mail, Phone, MapPin, Send} from "lucide-react";
-import emailjs from 'emailjs-com';
 import {GlassCard} from "../components/ui/glass-card";
 import {useState} from "react";
 import {useToast} from "../hooks/use-toast";
@@ -24,26 +23,24 @@ export default function Contact() {
         formState: {errors}
     } = useForm<ContactForm>();
 
+    const API = import.meta.env.VITE_API_URL ?? "";
+
     const onSubmit = async (data: ContactForm) => {
         try {
-            // EmailJS - Env variables should be set in a .env file
-            await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                {
-                    from_name: data.name,
-                    from_email: data.email,
-                    message: data.message,
-                    to_name: import.meta.env.VITE_EMAILJS_TO_NAME,
-                },
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-            );
+            console.log("Envoi du formulaire avec les données:", data);
+            console.log("Envoi vers l'API:", `${API}/api/contact`);
+            await fetch(`${API}/api/contact`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
 
             console.log("Email envoyé avec succès:");
 
             toast({
-                title: "Message envoyé !",
-                description: "Je vous répondrai dans les plus brefs délais.",
+                title: t("contact.form.sent"),
+                description: t("contact.form.thankYou"),
+                variant: "default",
             });
 
             reset();

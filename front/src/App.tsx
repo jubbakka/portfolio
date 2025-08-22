@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import Home  from './pages/Home';
+import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Projects from './pages/Projects';
@@ -8,13 +8,14 @@ import Contact from './pages/Contact';
 import CV from './pages/CV';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { AnimatePresence } from 'framer-motion';
+import {AnimatePresence} from 'framer-motion';
 import {Toaster} from "./components/ui/toaster.tsx";
+import {inject} from '@vercel/analytics';
 
 import './App.css'
 import './i18n'; // Import your i18n configuration
 function App() {
-
+    inject();
     return (
         <BrowserRouter>
             <div className="min-h-screen bg-slate-900 dark:bg-gray-900 transition-colors duration-300">
@@ -39,7 +40,7 @@ function App() {
 
                     <Footer/>
                 </div>
-                <Toaster />
+                <Toaster/>
             </div>
         </BrowserRouter>
     )

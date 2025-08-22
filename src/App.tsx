@@ -9,6 +9,7 @@ import CV from './pages/CV';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
+import {Toaster} from "./components/ui/toaster.tsx";
 
 import './App.css'
 import './i18n'; // Import your i18n configuration
@@ -38,6 +39,7 @@ function App() {
 
                     <Footer/>
                 </div>
+                <Toaster />
             </div>
         </BrowserRouter>
     )

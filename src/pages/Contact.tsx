@@ -142,7 +142,7 @@ export default function Contact() {
                                     id="name"
                                     {...register("name", {required: "Le nom est requis"})}
                                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                                    placeholder="Votre nom"
+                                    placeholder={t('contact.form.namePlaceholder')}
                                     aria-describedby={errors.name ? "name-error" : undefined}
                                     aria-invalid={errors.name ? "true" : "false"}
                                 />
@@ -164,14 +164,14 @@ export default function Contact() {
                                     id="email"
                                     type="email"
                                     {...register("email", {
-                                        required: "L'email est requis",
+                                        required: t('contact.errors.emailRequired'),
                                         pattern: {
                                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                            message: "Email invalide"
+                                            message: t('contact.errors.emailInvalid')
                                         }
                                     })}
                                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                                    placeholder="votre@email.com"
+                                    placeholder={t('contact.form.emailPlaceholder')}
                                     aria-describedby={errors.email ? "email-error" : undefined}
                                     aria-invalid={errors.email ? "true" : "false"}
                                 />
@@ -191,10 +191,10 @@ export default function Contact() {
                                 </label>
                                 <textarea
                                     id="message"
-                                    {...register("message", {required: "Le message est requis"})}
+                                    {...register("message", {required: t('contact.errors.messageRequired')})}
                                     rows={5}
                                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300 resize-none"
-                                    placeholder="Décrivez votre projet..."
+                                    placeholder={t('contact.form.messagePlaceholder')}
                                     aria-describedby={errors.message ? "message-error" : undefined}
                                     aria-invalid={errors.message ? "true" : "false"}
                                 />

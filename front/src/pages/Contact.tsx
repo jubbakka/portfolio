@@ -2,7 +2,6 @@ import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
 import {useForm} from "react-hook-form";
 import {Mail, Phone, MapPin, Send} from "lucide-react";
-import emailjs from 'emailjs-com';
 import {GlassCard} from "../components/ui/glass-card";
 import {useState} from "react";
 import {useToast} from "../hooks/use-toast";

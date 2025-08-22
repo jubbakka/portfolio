@@ -27,7 +27,6 @@ export default function Contact() {
 
     const onSubmit = async (data: ContactForm) => {
         try {
-            // EmailJS - Env variables should be set in a .env file
             await fetch(`${API}/api/contact`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

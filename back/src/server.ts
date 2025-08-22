@@ -7,13 +7,13 @@ import rateLimit from "express-rate-limit";
 
 const app = express();
 app.use(helmet());
-app.use(express.json({ limit: "50kb" }));
-app.use(cors({ origin: (process.env.CORS_ORIGIN ?? "http://localhost:5173").split(",") }));
+app.use(express.json({limit: "50kb"}));
+app.use(cors({origin: (process.env.CORS_ORIGIN ?? "http://localhost:5173").split(",")}));
 
-const contactLimiter = rateLimit({ windowMs: 300_000, max: 5 });
+const contactLimiter = rateLimit({windowMs: 300_000, max: 5});
 
 function escapeHtml(s: string) {
-    return s.replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]!));
+    return s.replace(/[&<>"']/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]!));
 }
 
 const transporter = nodemailer.createTransport({
@@ -28,14 +28,16 @@ const transporter = nodemailer.createTransport({
 
 transporter.verify().then(() => {
     console.log("SMTP ready");
-}).catch(err => {
-    console.error("SMTP error:", err);
-});
+}).catch((err: any) => {
+        console.error("SMTP error:", err);
+    }
+)
+;
 
 app.post("/api/contact", contactLimiter, async (req, res) => {
     try {
-        const { name = "", email = "", message = "" } = req.body;
-        if (!name || !email || !message) return res.status(400).json({ error: "Invalid payload" });
+        const {name = "", email = "", message = ""} = req.body;
+        if (!name || !email || !message) return res.status(400).json({error: "Invalid payload"});
 
         await transporter.sendMail({
             from: `"Portfolio" <${process.env.SMTP_USER}>`,
@@ -50,11 +52,11 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
       `,
         });
 
-        res.json({ ok: true });
+        res.json({ok: true});
         console.log(`Mail sent from ${email}`);
     } catch (e) {
         console.error(e);
-        res.status(500).json({ error: "Mail send failed" });
+        res.status(500).json({error: "Mail send failed"});
     }
 });
 

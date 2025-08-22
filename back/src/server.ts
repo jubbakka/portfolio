@@ -34,6 +34,7 @@ transporter.verify().then(() => {
 )
 ;
 
+// @ts-ignore
 app.post("/api/contact", contactLimiter, async (req, res) => {
     try {
         const {name = "", email = "", message = ""} = req.body;

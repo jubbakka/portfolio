@@ -23,5 +23,35 @@
   },
   "footer": {
     "copyright": "Tous droits réservés."
+  },
+  "contact": {
+    "title": "Contactez-moi !",
+    "subtitle": "N'hésitez pas à me contacter pour vos projets ou opportunités.",
+    "getInTouch": "Me contacter",
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "address": "Lausanne, Suisse"
+    },
+    "description": "Je suis toujours ouvert à de nouvelles opportunités et collaborations. Que vous ayez une question, un projet en tête ou simplement envie de discuter, n'hésitez pas à me contacter !",
+    "form": {
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Décrivez votre projet...",
+      "send": "Envoyer le message",
+      "sending": "Envoi...",
+      "sent": "Message envoyé",
+      "error": "Oups, réessaie plus tard."
+    },
+    "errors": {
+      "nameRequired": "Le nom est requis",
+      "emailInvalid": "L'email est invalide",
+        "emailRequired": "L'email est requis",
+      "messageRequired": "Le message est requis"
+    }
   }
 }

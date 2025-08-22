@@ -23,5 +23,35 @@
   },
   "footer": {
     "copyright": "Alle Rechte vorbehalten."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie mich!",
+    "subtitle": "Zögern Sie nicht, mich für Ihre Projekte oder Möglichkeiten zu kontaktieren.",
+    "getInTouch": "Kontakt aufnehmen",
+    "info": {
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "location": "Standort",
+      "address": "Lausanne, Schweiz"
+    },
+    "description": "Ich bin immer offen für neue Chancen und Kooperationen. Ob Sie eine Frage haben, ein Projekt im Kopf oder einfach nur plaudern möchten – zögern Sie nicht, mich zu kontaktieren!",
+    "form": {
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre@email.com",
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie Ihr Projekt...",
+      "send": "Nachricht senden",
+      "sending": "Senden...",
+      "sent": "Nachricht gesendet",
+      "error": "Ups, bitte versuchen Sie es später erneut."
+    },
+    "errors": {
+      "nameRequired": "Name ist erforderlich",
+      "emailInvalid": "Ungültige E-Mail",
+      "emailRequired": "E-Mail ist erforderlich",
+      "messageRequired": "Nachricht ist erforderlich"
+    }
   }
 }

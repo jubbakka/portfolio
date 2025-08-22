@@ -50,8 +50,34 @@
     "errors": {
       "nameRequired": "Le nom est requis",
       "emailInvalid": "L'email est invalide",
-        "emailRequired": "L'email est requis",
+      "emailRequired": "L'email est requis",
       "messageRequired": "Le message est requis"
+    }
+  },
+  "wip": {
+    "title": {
+      "part1": "Page",
+      "part2": "en travaux"
+    },
+    "subtitle": "Cette section n’est pas encore complète — je la finalise très bientôt.",
+    "lede": "On prépare un truc propre ici.",
+    "body": "Interface soignée, interactions fluides, fonctionnalités utiles. Besoin d’une info rapidement ? Contacte-moi.",
+    "progress": {
+      "label": "Avancement",
+      "status": "en cours",
+      "aria": "{{value}}% terminé"
+    },
+    "cta": {
+      "back": "Retour à l’accueil",
+      "contact": "Me contacter"
+    },
+    "footer": "Tu veux être prévenu quand c’est en ligne ? Écris-moi.",
+    "term": {
+      "compile": "Compilation de l’UI…",
+      "images": "Optimisation des images…",
+      "api": "Câblage des routes API…",
+      "deploy": "Déploiement de l’aperçu…",
+      "status": "Statut : En cours…"
     }
   }
 }

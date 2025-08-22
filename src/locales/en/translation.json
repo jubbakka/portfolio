@@ -53,5 +53,21 @@
       "emailRequired": "Email is required",
       "messageRequired": "Message is required"
     }
+  },
+  "wip": {
+    "title": { "part1": "Work", "part2": "in progress" },
+    "subtitle": "This section isn’t complete yet — I’ll finish it very soon.",
+    "lede": "We’re building something neat here.",
+    "body": "Expect a clean UI, smooth interactions, and practical features. Need info fast? Contact me.",
+    "progress": { "label": "Progress", "status": "ongoing", "aria": "{{value}}% complete" },
+    "cta": { "back": "Back to Home", "contact": "Contact me" },
+    "footer": "Want a heads-up when it’s live? Ping me.",
+    "term": {
+      "compile": "Compiling UI…",
+      "images": "Optimizing images…",
+      "api": "Wiring API routes…",
+      "deploy": "Deploying preview…",
+      "status": "Status: work in progress…"
+    }
   }
 }

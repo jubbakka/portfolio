@@ -53,5 +53,31 @@
       "emailRequired": "E-Mail ist erforderlich",
       "messageRequired": "Nachricht ist erforderlich"
     }
+  },
+  "wip": {
+    "title": {
+      "part1": "Seite",
+      "part2": "im Aufbau"
+    },
+    "subtitle": "Dieser Bereich ist noch nicht fertig — bald kommt das Update.",
+    "lede": "Hier entsteht etwas Schönes.",
+    "body": "Sauberes UI, flüssige Interaktionen, nützliche Features. Brauchst du schnell Infos? Schreib mir.",
+    "progress": {
+      "label": "Fortschritt",
+      "status": "läuft",
+      "aria": "{{value}} % fertig"
+    },
+    "cta": {
+      "back": "Zur Startseite",
+      "contact": "Kontaktiere mich"
+    },
+    "footer": "Meldung gewünscht, sobald es live ist? Schreib mir.",
+    "term": {
+      "compile": "UI wird kompiliert…",
+      "images": "Bilder werden optimiert…",
+      "api": "API-Routen werden verbunden…",
+      "deploy": "Vorschau wird bereitgestellt…",
+      "status": "Status: work in progress…"
+    }
   }
 }

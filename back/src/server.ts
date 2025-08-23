@@ -7,7 +7,6 @@ import rateLimit from "express-rate-limit";
 
 const app = express();
 
-// Si derrière un proxy (Render), pour que req.ip soit correcte
 app.set("trust proxy", 2);
 
 app.use(helmet());
@@ -36,7 +35,6 @@ const corsDelegate: CorsOptionsDelegate = (req, cb) => {
     });
 };
 
-// log préflights (utile pour debug)
 app.use((req: Request, _res: Response, next: NextFunction) => {
     console.log("Requête reçue:", {
         method: req.method,
@@ -52,8 +50,8 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
     next();
 });
 
-app.options("*", cors(corsDelegate));          // gère tous les préflights
-app.use(cors(corsDelegate));                   // CORS sur les routes
+app.options("*", cors(corsDelegate));
+app.use(cors(corsDelegate));
 
 
 /* ==================  R A T E   L I M I T  ================== */
@@ -70,7 +68,7 @@ const contactLimiter = rateLimit({
         return ip;
     },
     handler: (req, res, _next, opts) => {
-        const retryAfter = Math.ceil((opts.windowMs ?? 300_000) / 1000);
+        const retryAfter = Math.ceil((opts.windowMs ?? 360000_000) / 1000);
         console.log("Rate limit dépassé pour IP:", req.ip, "X-Forwarded-For:", req.headers["x-forwarded-for"]);
         res.setHeader("Retry-After", String(retryAfter));
         return res.status(429).json({error: "Too many requests", retryAfter});

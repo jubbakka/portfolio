@@ -50,7 +50,7 @@ export default function Contact() {
                     return;
                 }
             }
-            console.log("Email envoyé avec succès:");
+            console.log("Email envoyé avec succès");
 
             toast({
                 title: t("contact.form.sent"),

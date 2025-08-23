@@ -48,6 +48,10 @@
       "error": "Oops, please try again later."
     },
     "errors": {
+      "tooManyRequestsTitle": "Too Many Requests",
+      "tooManyRequestsDesc": "You have sent too many messages. Please try again later.",
+      "sendError": "Sending Error",
+      "tryAgain": "An error occurred. Please try again later.",
       "nameRequired": "Name is required",
       "emailInvalid": "Invalid email",
       "emailRequired": "Email is required",

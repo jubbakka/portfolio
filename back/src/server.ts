@@ -20,12 +20,10 @@ const allowedOrigins = (process.env.CORS_ORIGIN ?? "")
 
 const corsDelegate: CorsOptionsDelegate = (req, cb) => {
     const origin = (req.headers.origin as string | undefined);
-    console.log("CORS request from:", origin);
     // Si pas d'origine (ex: Postman) ou origine dans la liste, ok
 
 
     const isAllowed = !origin || allowedOrigins.includes(origin);
-    console.log("CORS allowed:", isAllowed);
     cb(null, {
         origin: isAllowed,                         // renvoie Access-Control-Allow-Origin si OK
         methods: ["POST", "OPTIONS"],
@@ -35,20 +33,6 @@ const corsDelegate: CorsOptionsDelegate = (req, cb) => {
     });
 };
 
-app.use((req: Request, _res: Response, next: NextFunction) => {
-    console.log("Requête reçue:", {
-        method: req.method,
-        url: req.url,
-        ip: req.ip,
-        xff: req.headers["x-forwarded-for"],
-        origin: req.headers.origin,
-    });
-    if (req.method === "OPTIONS") {
-        console.log("Preflight from:", req.headers.origin);
-    }
-    console.log("IP détectée:", req.ip);
-    next();
-});
 
 app.options("*", cors(corsDelegate));
 app.use(cors(corsDelegate));
@@ -63,13 +47,10 @@ const contactLimiter = rateLimit({
     keyGenerator: (req) => {
         const xff = req.headers["x-forwarded-for"];
         const ip = Array.isArray(xff) ? xff[0] : xff ? xff.split(",")[0].trim() : req.ip || "unknown";
-        console.log("X-Forwarded-For brut:", xff);
-        console.log("Rate limit IP sélectionnée:", ip);
         return ip;
     },
     handler: (req, res, _next, opts) => {
         const retryAfter = Math.ceil((opts.windowMs ?? 36000_000) / 1000);
-        console.log("Rate limit dépassé pour IP:", req.ip, "X-Forwarded-For:", req.headers["x-forwarded-for"]);
         res.setHeader("Retry-After", String(retryAfter));
         return res.status(429).json({error: "Too many requests", retryAfter});
     },

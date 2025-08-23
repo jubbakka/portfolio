@@ -27,30 +27,25 @@ export default function Contact() {
 
     const onSubmit = async (data: ContactForm) => {
         try {
-            console.log("Envoi du formulaire avec les données:", data);
-            console.log("Envoi vers l'API:", `${API}/api/contact`);
             const response = await fetch(`${API}/api/contact`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
             });
 
-            console.log("Réponse reçue:", response);
             const result = await response.json();
 
             if (!response.ok) {
                 if (response.status === 429) {
                     console.warn("Trop de requêtes:", result);
-                    const retryAfter = result.retryAfter ? `${Math.ceil(result.retryAfter / 60)} minutes` : "une heure";
                     toast({
                         title: t("contact.errors.tooManyRequestsTitle"),
-                        description: t("contact.errors.tooManyRequestsDesc", { retryAfter }),
+                        description: t("contact.errors.tooManyRequestsDesc"),
                         variant: "destructive",
                     });
                     return;
                 }
             }
-            console.log("Email envoyé avec succès");
 
             toast({
                 title: t("contact.form.sent"),

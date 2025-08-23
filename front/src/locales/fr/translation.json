@@ -50,7 +50,7 @@
     },
     "errors": {
       "tooManyRequestsTitle": "Trop de requêtes",
-      "tooManyRequestsDesc": "Vous avez envoyé trop de messages. Veuillez réessayer dans {retryAfter}.",
+      "tooManyRequestsDesc": "Vous avez envoyé trop de messages. Veuillez réessayer plus tard.",
       "sendError": "Erreur d'envoi",
       "tryAgain": "Une erreur est survenue. Veuillez réessayer plus tard.",
       "nameRequired": "Le nom est requis",

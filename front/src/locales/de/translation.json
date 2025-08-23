@@ -49,7 +49,7 @@
     },
     "errors": {
       "tooManyRequestsTitle": "Zu viele Anfragen",
-      "tooManyRequestsDesc": "Sie haben zu viele Nachrichten gesendet. Bitte versuchen Sie es in {retryAfter} erneut.",
+      "tooManyRequestsDesc": "Sie haben zu viele Nachrichten gesendet. Bitte versuchen Sie es später erneut.",
       "sendError": "Sende-Fehler",
       "tryAgain": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
       "nameRequired": "Name ist erforderlich",

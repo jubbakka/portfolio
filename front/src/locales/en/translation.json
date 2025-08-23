@@ -49,7 +49,7 @@
     },
     "errors": {
       "tooManyRequestsTitle": "Too Many Requests",
-      "tooManyRequestsDesc": "You have sent too many messages. Please try again in {retryAfter}.",
+      "tooManyRequestsDesc": "You have sent too many messages. Please try again later.",
       "sendError": "Sending Error",
       "tryAgain": "An error occurred. Please try again later.",
       "nameRequired": "Name is required",

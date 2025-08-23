@@ -1,10 +1,10 @@
-import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import {useTranslation} from "react-i18next";
+import {useEffect, useState} from "react";
 
 type Lang = "fr" | "en" | "de";
 
 export default function LanguageSwitcher() {
-    const { i18n, t } = useTranslation();
+    const {i18n, t} = useTranslation();
     const [lang, setLang] = useState<Lang>((i18n.language?.substring(0, 2) as Lang) || "fr");
 
     useEffect(() => {
@@ -15,11 +15,6 @@ export default function LanguageSwitcher() {
     }, [i18n]);
 
     const changeLanguage = async (l: Lang) => {
-        console.log("Attempting to change language...");
-        console.log("Available languages:", i18n.languages);
-        console.log("previous language:", lang);
-        console.log("Changing language to:", l);
-        console.log("Current language:", i18n.language);
         if (l === lang) return;
         await i18n.changeLanguage(l);
         setLang(l);

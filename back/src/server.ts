@@ -26,6 +26,7 @@ const corsDelegate: CorsOptionsDelegate = (req, cb) => {
 
 
     const isAllowed = !origin || allowedOrigins.includes(origin);
+    console.log("CORS allowed:", isAllowed);
     cb(null, {
         origin: isAllowed,                         // renvoie Access-Control-Allow-Origin si OK
         methods: ["POST", "OPTIONS"],
@@ -40,11 +41,13 @@ app.use((req: Request, _res: Response, next: NextFunction) => {
     if (req.method === "OPTIONS") {
         console.log("Preflight from:", req.headers.origin);
     }
+    console.log("IP détectée:", req.ip);
     next();
 });
 
 app.options("*", cors(corsDelegate));          // gère tous les préflights
 app.use(cors(corsDelegate));                   // CORS sur les routes
+
 
 /* ==================  R A T E   L I M I T  ================== */
 const contactLimiter = rateLimit({

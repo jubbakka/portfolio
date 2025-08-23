@@ -1,17 +1,17 @@
 import "dotenv/config";
-import express, { type Request, type Response, type NextFunction } from "express";
+import express, {type Request, type Response, type NextFunction} from "express";
 import nodemailer from "nodemailer";
 import helmet from "helmet";
-import cors, { type CorsOptionsDelegate } from "cors";
+import cors, {type CorsOptionsDelegate} from "cors";
 import rateLimit from "express-rate-limit";
 
 const app = express();
 
 // Si derrière un proxy (Render), pour que req.ip soit correcte
-app.set("trust proxy", 1);
+app.set("trust proxy", 2);
 
 app.use(helmet());
-app.use(express.json({ limit: "50kb" }));
+app.use(express.json({limit: "50kb"}));
 
 /* =====================  C O R S  ===================== */
 const allowedOrigins = (process.env.CORS_ORIGIN ?? "")
@@ -38,6 +38,13 @@ const corsDelegate: CorsOptionsDelegate = (req, cb) => {
 
 // log préflights (utile pour debug)
 app.use((req: Request, _res: Response, next: NextFunction) => {
+    console.log("Requête reçue:", {
+        method: req.method,
+        url: req.url,
+        ip: req.ip,
+        xff: req.headers["x-forwarded-for"],
+        origin: req.headers.origin,
+    });
     if (req.method === "OPTIONS") {
         console.log("Preflight from:", req.headers.origin);
     }
@@ -52,20 +59,27 @@ app.use(cors(corsDelegate));                   // CORS sur les routes
 /* ==================  R A T E   L I M I T  ================== */
 const contactLimiter = rateLimit({
     windowMs: 300_000, // 5 minutes
-    max: 5,            // 5 requêtes / 5 min / IP
+    max: 5,
     standardHeaders: true,
     legacyHeaders: false,
-    keyGenerator: (req) => req.ip ?? "unknown",
+    keyGenerator: (req) => {
+        const xff = req.headers["x-forwarded-for"];
+        const ip = Array.isArray(xff) ? xff[0] : xff ? xff.split(",")[0].trim() : req.ip || "unknown";
+        console.log("X-Forwarded-For brut:", xff);
+        console.log("Rate limit IP sélectionnée:", ip);
+        return ip;
+    },
     handler: (req, res, _next, opts) => {
         const retryAfter = Math.ceil((opts.windowMs ?? 300_000) / 1000);
+        console.log("Rate limit dépassé pour IP:", req.ip, "X-Forwarded-For:", req.headers["x-forwarded-for"]);
         res.setHeader("Retry-After", String(retryAfter));
-        return res.status(429).json({ error: "Too many requests", retryAfter });
+        return res.status(429).json({error: "Too many requests", retryAfter});
     },
 });
 
 /* =====================  U T I L S  ===================== */
 function escapeHtml(s: string) {
-    return s.replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]!));
+    return s.replace(/[&<>"']/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]!));
 }
 
 /* ==================  M A I L   T R A N S P O R T  ================== */
@@ -91,12 +105,12 @@ app.get("/health", (_req: Request, res: Response) => res.status(200).send("ok"))
 
 app.post("/api/contact", contactLimiter, async (req: Request, res: Response) => {
     try {
-        const { name = "", email = "", message = "" } = (req.body ?? {}) as {
+        const {name = "", email = "", message = ""} = (req.body ?? {}) as {
             name: string; email: string; message: string;
         };
 
         if (!name || !email || !message) {
-            return res.status(400).json({ error: "Invalid payload" });
+            return res.status(400).json({error: "Invalid payload"});
         }
 
         await transporter.sendMail({
@@ -113,10 +127,10 @@ app.post("/api/contact", contactLimiter, async (req: Request, res: Response) => 
         });
 
         console.log(`Mail sent from ${email}`);
-        return res.json({ ok: true });
+        return res.json({ok: true});
     } catch (e: unknown) {
         console.error(e);
-        return res.status(500).json({ error: "Mail send failed" });
+        return res.status(500).json({error: "Mail send failed"});
     }
 });
 

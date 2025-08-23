@@ -68,7 +68,7 @@ const contactLimiter = rateLimit({
         return ip;
     },
     handler: (req, res, _next, opts) => {
-        const retryAfter = Math.ceil((opts.windowMs ?? 360000_000) / 1000);
+        const retryAfter = Math.ceil((opts.windowMs ?? 36000_000) / 1000);
         console.log("Rate limit dépassé pour IP:", req.ip, "X-Forwarded-For:", req.headers["x-forwarded-for"]);
         res.setHeader("Retry-After", String(retryAfter));
         return res.status(429).json({error: "Too many requests", retryAfter});

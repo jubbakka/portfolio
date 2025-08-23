@@ -49,6 +49,10 @@
       "error": "Oups, réessaie plus tard."
     },
     "errors": {
+      "tooManyRequestsTitle": "Trop de requêtes",
+      "tooManyRequestsDesc": "Vous avez envoyé trop de messages. Veuillez réessayer dans {retryAfter}.",
+      "sendError": "Erreur d'envoi",
+      "tryAgain": "Une erreur est survenue. Veuillez réessayer plus tard.",
       "nameRequired": "Le nom est requis",
       "emailInvalid": "L'email est invalide",
       "emailRequired": "L'email est requis",

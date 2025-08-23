@@ -29,12 +29,26 @@ export default function Contact() {
         try {
             console.log("Envoi du formulaire avec les données:", data);
             console.log("Envoi vers l'API:", `${API}/api/contact`);
-            await fetch(`${API}/api/contact`, {
+            const response = await fetch(`${API}/api/contact`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
             });
 
+            const result = await response.json();
+
+            if (!response.ok) {
+                if (response.status === 429) {
+                    console.warn("Trop de requêtes:", result);
+                    const retryAfter = result.retryAfter ? `${Math.ceil(result.retryAfter / 60)} minutes` : "une heure";
+                    toast({
+                        title: t("contact.errors.tooManyRequestsTitle"),
+                        description: t("contact.errors.tooManyRequestsDesc", { retryAfter }),
+                        variant: "destructive",
+                    });
+                    return;
+                }
+            }
             console.log("Email envoyé avec succès:");
 
             toast({
@@ -47,8 +61,8 @@ export default function Contact() {
         } catch (error) {
             console.error("Erreur lors de l'envoi:", error);
             toast({
-                title: "Erreur d'envoi",
-                description: "Une erreur est survenue. Veuillez réessayer plus tard.",
+                title: t("contact.errors.sendError"),
+                description: t("contact.errors.tryAgain"),
                 variant: "destructive",
             });
         } finally {

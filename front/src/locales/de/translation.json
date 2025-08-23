@@ -48,6 +48,10 @@
       "error": "Ups, bitte versuchen Sie es später erneut."
     },
     "errors": {
+      "tooManyRequestsTitle": "Zu viele Anfragen",
+      "tooManyRequestsDesc": "Sie haben zu viele Nachrichten gesendet. Bitte versuchen Sie es in {retryAfter} erneut.",
+      "sendError": "Sende-Fehler",
+      "tryAgain": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
       "nameRequired": "Name ist erforderlich",
       "emailInvalid": "Ungültige E-Mail",
       "emailRequired": "E-Mail ist erforderlich",

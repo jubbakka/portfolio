@@ -35,6 +35,7 @@ export default function Contact() {
                 body: JSON.stringify(data),
             });
 
+            console.log("Réponse reçue:", response);
             const result = await response.json();
 
             if (!response.ok) {

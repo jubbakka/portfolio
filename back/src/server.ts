@@ -21,6 +21,9 @@ const allowedOrigins = (process.env.CORS_ORIGIN ?? "")
 
 const corsDelegate: CorsOptionsDelegate = (req, cb) => {
     const origin = (req.headers.origin as string | undefined);
+    console.log("CORS request from:", origin);
+    // Si pas d'origine (ex: Postman) ou origine dans la liste, ok
+
 
     const isAllowed = !origin || allowedOrigins.includes(origin);
     cb(null, {

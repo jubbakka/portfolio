@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import {GlassCard} from "../components/ui/glass-card.tsx";
 import {useTranslation} from "react-i18next";
-import {BriefcaseIcon} from "lucide-react";
+import {BriefcaseIcon, Heart} from "lucide-react";
 
 import profileImage from "../images/juliengourmet.jpg";
 
@@ -13,8 +13,16 @@ const skills = [
     {name: "React", level: 80},
     {name: "Node.js", level: 75},
     {name: "CSS", level: 70},
-    {name: "HTML", level: 95},
+    {name: "HTML", level: 95}
 ];
+
+const hobbies = [
+    {key: "photography", emoji: "📷"},
+    {key: "travel", emoji: "🌍"},
+    {key: "hiking", emoji: "🥾"},
+    {key: "sports_cars", emoji: "🏎️"}
+];
+
 
 //todo add translation
 // review description on each experience
@@ -92,12 +100,12 @@ export default function About() {
                         </GlassCard>
                         <GlassCard className="p-8 h-full">
                             <h3 className="text-2xl font-bold mb-8">
-                            Compétences
+                                Compétences
                             </h3>
                             <div className="space-y-4">
                                 {skills.map((skill) => (
                                     <div key={skill.name}>
-                                           <div className="flex justify-between mb-1">
+                                        <div className="flex justify-between mb-1">
                                             <span>{skill.name}</span>
                                             <span>{skill.level}%</span>
                                         </div>
@@ -114,20 +122,31 @@ export default function About() {
                     </div>
                     <GlassCard className="mb-16 p-8">
                         <div className="flex items-center mb-8">
-                            <BriefcaseIcon className="w-7 h-7 text-blue-400 mr-3" />
-                            <h3 className="text-2xl font-bold tracking-tight font-sans">Expériences Professionnelles</h3>
+                            <motion.div
+                                animate={{
+                                    scale: [1, 1.2, 1],
+                                    rotate: [0, 15, -15, 0]
+                                }}
+                                transition={{repeat: Infinity, duration: 3, delay: 2}}
+                            >
+                                <BriefcaseIcon className="w-7 h-7 text-blue-400 mr-3"/>
+                            </motion.div>
+                            <h3 className="text-2xl font-bold tracking-tight font-sans">Expériences
+                                Professionnelles</h3>
                         </div>
                         <ol className="relative border-l border-blue-200 ml-4">
                             {experiences.map((exp) => (
                                 <li key={exp.title} className="mb-10 ml-6">
-                                    <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full" />
+                                    <span
+                                        className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-400 rounded-full"/>
                                     <div className="flex justify-between items-start">
                                         <div>
                                             <h4 className="text-lg font-semibold font-sans">{exp.title}</h4>
                                             <span className="text-blue-300 font-medium font-sans">{exp.company}</span>
                                             <p className="text-slate-400 mt-2 font-sans">{exp.description}</p>
                                         </div>
-                                        <span className="text-sm text-slate-400 min-w-max ml-4 font-sans">{exp.date}</span>
+                                        <span
+                                            className="text-sm text-slate-400 min-w-max ml-4 font-sans">{exp.date}</span>
                                     </div>
                                 </li>
                             ))}
@@ -135,10 +154,36 @@ export default function About() {
                     </GlassCard>
 
                     <GlassCard className="mb-16 p-8">
-                        <h3 className="text-2xl font-bold mb-8">
-                            Passions et loisirs
-                            //TODO
-                        </h3>
+                        <div className="flex items-center mb-8">
+                            <motion.div
+                                animate={{
+                                    scale: [1, 1.2, 1],
+                                    rotate: [0, 15, -15, 0]
+                                }}
+                                transition={{repeat: Infinity, duration: 3, delay: 2}}
+                            >
+                                <Heart className="w-7 h-7 text-pink-400 mr-3"/>
+                            </motion.div>
+                            <h3 className="text-2xl font-bold tracking-tight font-sans">Passions</h3>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            {hobbies.map((hobby) => (
+                                <div
+                                    key={hobby.key}
+                                    className="bg-slate-800 rounded-xl p-6 shadow flex flex-col items-start"
+                                >
+                                    <div className={"flex items-center mb-2 space-x-4"}>
+                                        <span className="text-2xl mb-2">{hobby.emoji}</span>
+                                        <h4 className="text-lg font-semibold mb-1">
+                                            {t(`about.hobbies.${hobby.key}.title`)}
+                                        </h4>
+                                    </div>
+                                    <p className="text-slate-400">
+                                        {t(`about.hobbies.${hobby.key}.desc`)}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
                     </GlassCard>
                 </section>
 

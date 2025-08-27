@@ -1,32 +1,32 @@
 {
   "home": {
     "title": {
-      "part1": "Engineer",
-      "part2": "Fullstack"
+      "part1": "Fullstack",
+      "part2": "Engineer"
     },
-    "subtitle": "I love designing and developing useful, polished, and efficient applications by leveraging modern technologies.",
+    "subtitle": "I love designing and developing useful, polished, and efficient applications, leveraging modern technologies.",
     "buttons": {
-      "projects": "View my projects",
-      "contact": "Contact me"
+      "projects": "Discover my creations",
+      "contact": "Get in touch"
     }
   },
   "navbar": {
     "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "cv": "Resume",
-    "contact": "Contact",
+    "about": "About me",
+    "projects": "My projects",
+    "cv": "My journey",
+    "contact": "Contact me",
     "aria": {
-      "main": "Main navigation",
-      "home": "Go to homepage"
+      "main": "Main menu",
+      "home": "Back to home"
     }
   },
   "footer": {
-    "copyright": "All right reserved."
+    "copyright": "© 2025 Julien Gourmet - Built with passion"
   },
   "contact": {
-    "title": "Get in touch!",
-    "subtitle": "Feel free to contact me for your projects or opportunities.",
+    "title": "Ready to collaborate?",
+    "subtitle": "Reach out to bring your ideas or opportunities to life!",
     "getInTouch": "Contact me",
     "info": {
       "email": "Email",
@@ -34,44 +34,108 @@
       "location": "Location",
       "address": "Lausanne, Switzerland"
     },
-    "description": "I am always open to new opportunities and collaborations. Whether you have a question, a project in mind, or simply want to chat, don’t hesitate to reach out!",
+    "description": "Got a project, question, or just want to talk tech? I’m here to respond with enthusiasm!",
     "form": {
-      "name": "Full name",
-      "namePlaceholder": "Your name",
+      "name": "Your name",
+      "namePlaceholder": "What’s your name?",
       "email": "Email",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "Your email here",
       "message": "Message",
-      "messagePlaceholder": "Describe your project...",
-      "send": "Send message",
+      "messagePlaceholder": "Tell me about your project!",
+      "send": "Send",
       "sending": "Sending...",
-      "sent": "Message sent",
-      "error": "Oops, please try again later."
+      "sent": "Message received!",
+      "thankYou": "Thanks! I’ll get back to you soon.",
+      "error": "Oops, something went wrong. Try again!"
     },
     "errors": {
-      "tooManyRequestsTitle": "Too Many Requests",
-      "tooManyRequestsDesc": "You have sent too many messages. Please try again later.",
-      "sendError": "Sending Error",
-      "tryAgain": "An error occurred. Please try again later.",
-      "nameRequired": "Name is required",
-      "emailInvalid": "Invalid email",
-      "emailRequired": "Email is required",
-      "messageRequired": "Message is required"
+      "tooManyRequestsTitle": "Too many messages!",
+      "tooManyRequestsDesc": "You’re enthusiastic, I see! Wait a bit and try again.",
+      "sendError": "Small technical glitch",
+      "tryAgain": "Sorry, it didn’t work. Shall we try again?",
+      "nameRequired": "A name, please!",
+      "emailInvalid": "This email seems shy, check it!",
+      "emailRequired": "An email to reply to?",
+      "messageRequired": "Tell me more about your idea!"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Discover my journey and passions",
+    "profile": {
+      "job_title": "Full Stack Developer",
+      "description": "A lover of code and seamless interfaces, I turn ideas into modern, accessible applications. Always curious, I juggle technologies to create memorable experiences. Technical challenge? I’m all in!"
+    },
+    "skills": {
+      "title": "What I master"
+    },
+    "experiences": {
+      "title": "Professional Experience",
+      "items": [
+        {
+          "title": "Business Analyst",
+          "company": "NEOSIS",
+          "date": "10.2024 - Present",
+          "description": "Needs analysis, writing functional specifications, project management using Agile/Scrum methodology, focusing on complementary benefits of the 1st pillar for the iPension product."
+        },
+        {
+          "title": "Fullstack Developer - Final Internship",
+          "company": "ELCA",
+          "date": "03.2024 - 08.2024",
+          "description": "Developed a module for a client portal of an energy provider. Used Drupal and TailwindCSS."
+        },
+        {
+          "title": "Fullstack Developer - Internship",
+          "company": "EfficientIP",
+          "date": "09.2022 - 03.2023",
+          "description": "Managed and developed features for an internal CRM, using Python Flask and React."
+        }
+      ]
+    },
+    "hobbies": {
+      "title": "What makes me tick",
+      "photography": {
+        "title": "Photography",
+        "desc": "Capturing the perfect moment, whether it’s a sunset or a bustling street."
+      },
+      "travel": {
+        "title": "Travel",
+        "desc": "Exploring new cultures and inspiring horizons."
+      },
+      "hiking": {
+        "title": "Hiking",
+        "desc": "Trekking trails, pushing my limits in the heart of nature."
+      },
+      "sports_cars": {
+        "title": "Sports Cars",
+        "desc": "Admiring the power and elegance of high-performance cars, on the track or on paper."
+      }
     }
   },
   "wip": {
-    "title": { "part1": "Work", "part2": "in progress" },
-    "subtitle": "This section isn’t complete yet — I’ll finish it very soon.",
-    "lede": "We’re building something neat here.",
-    "body": "Expect a clean UI, smooth interactions, and practical features. Need info fast? Contact me.",
-    "progress": { "label": "Progress", "status": "ongoing", "aria": "{{value}}% complete" },
-    "cta": { "back": "Back to Home", "contact": "Contact me" },
-    "footer": "Want a heads-up when it’s live? Ping me.",
+    "title": {
+      "part1": "Page",
+      "part2": "under construction"
+    },
+    "subtitle": "This section isn’t complete yet — I’m finalizing it soon.",
+    "lede": "We’re building something sleek here.",
+    "body": "Polished interface, smooth interactions, useful features. Need info quickly? Contact me.",
+    "progress": {
+      "label": "Progress",
+      "status": "in progress",
+      "aria": "{{value}}% complete"
+    },
+    "cta": {
+      "back": "Back to home",
+      "contact": "Contact me"
+    },
+    "footer": "Want to be notified when it’s live? Drop me a line.",
     "term": {
-      "compile": "Compiling UI…",
+      "compile": "Compiling the UI…",
       "images": "Optimizing images…",
       "api": "Wiring API routes…",
-      "deploy": "Deploying preview…",
-      "status": "Status: work in progress…"
+      "deploy": "Deploying the preview…",
+      "status": "Status: In progress…"
     }
   }
 }

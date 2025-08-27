@@ -6,27 +6,27 @@
     },
     "subtitle": "J’aime concevoir et développer des applications utiles, soignées et efficaces, en tirant parti des technologies modernes.",
     "buttons": {
-      "projects": "Voir mes projets",
-      "contact": "Me contacter"
+      "projects": "Découvrir mes créations",
+      "contact": "Échanger avec moi"
     }
   },
   "navbar": {
     "home": "Accueil",
-    "about": "A propos",
-    "projects": "Projets",
-    "cv": "CV",
-    "contact": "Contact",
+    "about": "Qui suis-je ?",
+    "projects": "Mes projets",
+    "cv": "Mon parcours",
+    "contact": "Me contacter",
     "aria": {
-      "main": "Main navigation",
-      "home": "Go to homepage"
+      "main": "Menu principal",
+      "home": "Retour à l’accueil"
     }
   },
   "footer": {
-    "copyright": "Tous droits réservés."
+    "copyright": "© 2025 Julien Gourmet - Créé avec passion"
   },
   "contact": {
-    "title": "Contactez-moi !",
-    "subtitle": "N'hésitez pas à me contacter pour vos projets ou opportunités.",
+    "title": "Prêt à collaborer ?",
+    "subtitle": "Contactez-moi pour donner vie à vos idées ou opportunités !",
     "getInTouch": "Me contacter",
     "info": {
       "email": "Email",
@@ -34,29 +34,82 @@
       "location": "Localisation",
       "address": "Lausanne, Suisse"
     },
-    "description": "Je suis toujours ouvert à de nouvelles opportunités et collaborations. Que vous ayez une question, un projet en tête ou simplement envie de discuter, n'hésitez pas à me contacter !",
+    "description": "Projet en tête, question ou juste envie de discuter tech ? Je suis là pour vous répondre avec enthousiasme !",
     "form": {
-      "name": "Nom complet",
-      "namePlaceholder": "Votre nom",
+      "name": "Votre nom",
+      "namePlaceholder": "Comment vous appelez-vous ?",
       "email": "Email",
-      "emailPlaceholder": "votre@email.com",
+      "emailPlaceholder": "Votre email ici",
       "message": "Message",
-      "messagePlaceholder": "Décrivez votre projet...",
-      "send": "Envoyer le message",
-      "sending": "Envoi...",
-      "sent": "Message envoyé",
-      "thankYou": "Merci pour votre message ! Je vous répondrai dès que possible.",
-      "error": "Oups, réessaie plus tard."
+      "messagePlaceholder": "Parlez-moi de votre projet !",
+      "send": "Envoyer",
+      "sending": "Envoi en cours...",
+      "sent": "Message bien reçu !",
+      "thankYou": "Merci ! Je reviens vers vous très vite.",
+      "error": "Oups, quelque chose n'a pas joué. Réessayez !"
     },
     "errors": {
-      "tooManyRequestsTitle": "Trop de requêtes",
-      "tooManyRequestsDesc": "Vous avez envoyé trop de messages. Veuillez réessayer plus tard.",
-      "sendError": "Erreur d'envoi",
-      "tryAgain": "Une erreur est survenue. Veuillez réessayer plus tard.",
-      "nameRequired": "Le nom est requis",
-      "emailInvalid": "L'email est invalide",
-      "emailRequired": "L'email est requis",
-      "messageRequired": "Le message est requis"
+      "tooManyRequestsTitle": "Trop de messages !",
+      "tooManyRequestsDesc": "Vous êtes enthousiaste, je vois ! Attendez un peu et réessayez.",
+      "sendError": "Petit souci technique",
+      "tryAgain": "Désolé, ça n'a pas fonctionné. On réessaie ?",
+      "nameRequired": "Un petit nom, s'il vous plaît !",
+      "emailInvalid": "Cet email semble timide, vérifiez-le !",
+      "emailRequired": "Un email pour vous répondre ?",
+      "messageRequired": "Dites-m'en plus sur votre idée !"
+    }
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Découvrez mon parcours et mes passions",
+    "profile": {
+      "job_title": "Développeur Full Stack",
+      "description": "Amoureux du code et des interfaces fluides, je transforme des idées en applications modernes et accessibles. Toujours curieux, je jongle avec les technos pour créer des expériences qui marquent. Défi technique ? J'adore ça !"
+    },
+    "skills": {
+      "title": "Ce que je maîtrise"
+    },
+    "experiences": {
+      "title": "Expériences Professionnelles",
+      "items": [
+        {
+          "title": "Business Analyst",
+          "company": "NEOSIS",
+          "date": "10.2024 - Présent",
+          "description": "Analyse des besoins, rédaction des spécifications fonctionnelles, gestion de projet en méthodologie Agile/Scrum, sur le thème des prestations complémentaires du 1er pilier sur le produit iPension."
+        },
+        {
+          "title": "Développeur Fullstack - Stage de fin d'études",
+          "company": "ELCA",
+          "date": "03.2024 - 08.2024",
+          "description": "Création d'un module pour un portail client d'un fournisseur d'énergie. Utilisation de Drupal, TailwindCSS."
+        },
+        {
+          "title": "Développeur Fullstack - Stage",
+          "company": "EfficientIP",
+          "date": "09.2022 - 03.2023",
+          "description": "Gestion et développement de fonctionnalités pour un CRM interne, utilisation de Python Flask et React."
+        }
+      ]
+    },
+    "hobbies": {
+      "title": "Ce qui me fait vibrer",
+      "photography": {
+        "title": "Photographie",
+        "desc": "Figer l'instant parfait, qu'il s'agisse d'un coucher de soleil ou d'une rue animée."
+      },
+      "travel": {
+        "title": "Voyage",
+        "desc": "Partir à la découverte de nouvelles cultures et d'horizons inspirants."
+      },
+      "hiking": {
+        "title": "Randonnée",
+        "desc": "Arpenter les sentiers, repousser mes limites au cœur de la nature."
+      },
+      "sports_cars": {
+        "title": "Voitures de sport",
+        "desc": "Admirer la puissance et l'élégance des bolides, sur circuit ou sur papier."
+      }
     }
   },
   "wip": {

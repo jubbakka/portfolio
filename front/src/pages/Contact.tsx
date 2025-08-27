@@ -5,6 +5,7 @@ import {Mail, Phone, MapPin, Send} from "lucide-react";
 import {GlassCard} from "../components/ui/glass-card";
 import {useState} from "react";
 import {useToast} from "../hooks/use-toast";
+import {SectionTitle} from "../components/ui/section-title.tsx";
 
 interface ContactForm {
     name: string;
@@ -69,10 +70,9 @@ export default function Contact() {
         <main className="min-h-screen px-4 pt-32 pb-16 bg-slate-900 text-slate-100">
             <section className="container mx-auto px-4 py-4">
                 <header className="text-center mb-10">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-clip-text mb-4">{t("contact.title")}</h1>
-                    <p className="text-slate-400 mt-2 text-lg md:text-xl max-w-2xl mx-auto">
-                        {t("contact.subtitle")}
-                    </p>
+                    <SectionTitle subtitle={t("contact.subtitle")}>
+                        {t("contact.title")}
+                    </SectionTitle>
                 </header>
             </section>
             <section className="container mx-auto px-4 py-10">

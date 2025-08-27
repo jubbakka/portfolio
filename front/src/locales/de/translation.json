@@ -1,87 +1,141 @@
 {
   "home": {
     "title": {
-      "part1": "Ingenieur",
-      "part2": "Fullstack"
+      "part1": "Fullstack",
+      "part2": "Ingenieur"
     },
     "subtitle": "Ich liebe es, nützliche, durchdachte und effiziente Anwendungen zu entwerfen und zu entwickeln, indem ich moderne Technologien nutze.",
     "buttons": {
-      "projects": "Meine Projekte ansehen",
-      "contact": "Mich kontaktieren"
+      "projects": "Meine Kreationen entdecken",
+      "contact": "Mit mir in Kontakt treten"
     }
   },
   "navbar": {
     "home": "Startseite",
     "about": "Über mich",
-    "projects": "Projekte",
-    "cv": "Lebenslauf",
-    "contact": "Kontakt",
+    "projects": "Meine Projekte",
+    "cv": "Mein Werdegang",
+    "contact": "Kontaktieren Sie mich",
     "aria": {
-      "main": "Hauptnavigation",
-      "home": "Zur Startseite"
+      "main": "Hauptmenü",
+      "home": "Zurück zur Startseite"
     }
   },
   "footer": {
-    "copyright": "Alle Rechte vorbehalten."
+    "copyright": "© 2025 Julien Gourmet - Mit Leidenschaft erstellt"
   },
   "contact": {
-    "title": "Kontaktieren Sie mich!",
-    "subtitle": "Zögern Sie nicht, mich für Ihre Projekte oder Möglichkeiten zu kontaktieren.",
-    "getInTouch": "Kontakt aufnehmen",
+    "title": "Bereit zur Zusammenarbeit?",
+    "subtitle": "Kontaktieren Sie mich, um Ihre Ideen oder Möglichkeiten zum Leben zu erwecken!",
+    "getInTouch": "Kontaktieren Sie mich",
     "info": {
       "email": "E-Mail",
       "phone": "Telefon",
       "location": "Standort",
       "address": "Lausanne, Schweiz"
     },
-    "description": "Ich bin immer offen für neue Chancen und Kooperationen. Ob Sie eine Frage haben, ein Projekt im Kopf oder einfach nur plaudern möchten – zögern Sie nicht, mich zu kontaktieren!",
+    "description": "Haben Sie ein Projekt, eine Frage oder einfach Lust, über Technik zu sprechen? Ich bin hier, um Ihnen mit Begeisterung zu antworten!",
     "form": {
-      "name": "Vollständiger Name",
-      "namePlaceholder": "Ihr Name",
+      "name": "Ihr Name",
+      "namePlaceholder": "Wie heißen Sie?",
       "email": "E-Mail",
-      "emailPlaceholder": "ihre@email.com",
+      "emailPlaceholder": "Ihre E-Mail hier",
       "message": "Nachricht",
-      "messagePlaceholder": "Beschreiben Sie Ihr Projekt...",
-      "send": "Nachricht senden",
-      "sending": "Senden...",
-      "sent": "Nachricht gesendet",
-      "error": "Ups, bitte versuchen Sie es später erneut."
+      "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt!",
+      "send": "Senden",
+      "sending": "Wird gesendet...",
+      "sent": "Nachricht erhalten!",
+      "thankYou": "Danke! Ich melde mich bald bei Ihnen.",
+      "error": "Ups, etwas hat nicht geklappt. Nochmal versuchen!"
     },
     "errors": {
-      "tooManyRequestsTitle": "Zu viele Anfragen",
-      "tooManyRequestsDesc": "Sie haben zu viele Nachrichten gesendet. Bitte versuchen Sie es später erneut.",
-      "sendError": "Sende-Fehler",
-      "tryAgain": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
-      "nameRequired": "Name ist erforderlich",
-      "emailInvalid": "Ungültige E-Mail",
-      "emailRequired": "E-Mail ist erforderlich",
-      "messageRequired": "Nachricht ist erforderlich"
+      "tooManyRequestsTitle": "Zu viele Nachrichten!",
+      "tooManyRequestsDesc": "Sie sind begeistert, das sehe ich! Warten Sie kurz und versuchen Sie es erneut.",
+      "sendError": "Kleiner technischer Fehler",
+      "tryAgain": "Entschuldigung, es hat nicht geklappt. Nochmal versuchen?",
+      "nameRequired": "Ein Name, bitte!",
+      "emailInvalid": "Diese E-Mail scheint schüchtern, überprüfen Sie sie!",
+      "emailRequired": "Eine E-Mail, um zu antworten?",
+      "messageRequired": "Erzählen Sie mir mehr über Ihre Idee!"
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Erfahren Sie mehr über meinen Werdegang und meine Leidenschaften",
+    "profile": {
+      "job_title": "Full Stack Entwickler",
+      "description": "Ein Liebhaber von Code und nahtlosen Schnittstellen, verwandle ich Ideen in moderne, zugängliche Anwendungen. Immer neugierig, jongliere ich mit Technologien, um unvergessliche Erlebnisse zu schaffen. Technische Herausforderung? Ich bin dabei!"
+    },
+    "skills": {
+      "title": "Was ich beherrsche"
+    },
+    "experiences": {
+      "title": "Berufserfahrung",
+      "items": [
+        {
+          "title": "Business Analyst",
+          "company": "NEOSIS",
+          "date": "10.2024 - Heute",
+          "description": "Bedarfsanalyse, Erstellung funktionaler Spezifikationen, Projektmanagement nach Agile/Scrum-Methodik, mit Fokus auf Zusatzleistungen des 1. Pfeilers für das Produkt iPension."
+        },
+        {
+          "title": "Fullstack Entwickler - Abschlusspraktikum",
+          "company": "ELCA",
+          "date": "03.2024 - 08.2024",
+          "description": "Entwicklung eines Moduls für ein Kundenportal eines Energieversorgers. Verwendung von Drupal und TailwindCSS."
+        },
+        {
+          "title": "Fullstack Entwickler - Praktikum",
+          "company": "EfficientIP",
+          "date": "09.2022 - 03.2023",
+          "description": "Verwaltung und Entwicklung von Funktionen für ein internes CRM, Verwendung von Python Flask und React."
+        }
+      ]
+    },
+    "hobbies": {
+      "title": "Was mich begeistert",
+      "photography": {
+        "title": "Fotografie",
+        "desc": "Den perfekten Moment einfangen, sei es ein Sonnenuntergang oder eine belebte Straße."
+      },
+      "travel": {
+        "title": "Reisen",
+        "desc": "Neue Kulturen und inspirierende Horizonte entdecken."
+      },
+      "hiking": {
+        "title": "Wandern",
+        "desc": "Pfade erkunden, meine Grenzen in der Natur ausloten."
+      },
+      "sports_cars": {
+        "title": "Sportwagen",
+        "desc": "Die Kraft und Eleganz von Hochleistungsautos bewundern, auf der Rennstrecke oder auf Papier."
+      }
     }
   },
   "wip": {
     "title": {
       "part1": "Seite",
-      "part2": "im Aufbau"
+      "part2": "im Bau"
     },
-    "subtitle": "Dieser Bereich ist noch nicht fertig — bald kommt das Update.",
+    "subtitle": "Dieser Abschnitt ist noch nicht fertig – ich finalisiere ihn bald.",
     "lede": "Hier entsteht etwas Schönes.",
-    "body": "Sauberes UI, flüssige Interaktionen, nützliche Features. Brauchst du schnell Infos? Schreib mir.",
+    "body": "Durchdachte Schnittstelle, flüssige Interaktionen, nützliche Funktionen. Brauchen Sie schnell Infos? Kontaktieren Sie mich.",
     "progress": {
       "label": "Fortschritt",
-      "status": "läuft",
-      "aria": "{{value}} % fertig"
+      "status": "in Bearbeitung",
+      "aria": "{{value}}% abgeschlossen"
     },
     "cta": {
-      "back": "Zur Startseite",
-      "contact": "Kontaktiere mich"
+      "back": "Zurück zur Startseite",
+      "contact": "Kontaktieren Sie mich"
     },
-    "footer": "Meldung gewünscht, sobald es live ist? Schreib mir.",
+    "footer": "Möchten Sie benachrichtigt werden, wenn es online ist? Schreiben Sie mir.",
     "term": {
-      "compile": "UI wird kompiliert…",
-      "images": "Bilder werden optimiert…",
-      "api": "API-Routen werden verbunden…",
-      "deploy": "Vorschau wird bereitgestellt…",
-      "status": "Status: work in progress…"
+      "compile": "Kompilierung der Benutzeroberfläche…",
+      "images": "Optimierung der Bilder…",
+      "api": "Verkabelung der API-Routen…",
+      "deploy": "Bereitstellung der Vorschau…",
+      "status": "Status: In Bearbeitung…"
     }
   }
 }

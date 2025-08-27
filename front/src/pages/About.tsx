@@ -25,8 +25,12 @@ const hobbies = [
 
 export default function About() {
     const {t} = useTranslation();
-    const experiences = t("about.experiences.items", {returnObjects: true});
-
+    const experiences = t("about.experiences.items", {returnObjects: true}) as Array<{
+        title: string;
+        date: string;
+        company: string;
+        description: string;
+    }>;
     return (
         <main className="min-h-screen px-4 pt-32 pb-16 bg-slate-900 text-slate-100">
             <div className="max-w-6xl mx-auto">

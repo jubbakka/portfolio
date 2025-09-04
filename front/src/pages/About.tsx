@@ -5,15 +5,16 @@ import {BriefcaseIcon, Heart} from "lucide-react";
 import profileImage from "../images/juliengourmet.jpg";
 import {FadeInSection} from "../components/ui/fade-in-section.tsx";
 import {SectionTitle} from "../components/ui/section-title.tsx";
+import {Icon} from "@iconify/react";
 
 const skills = [
-    {name: "JavaScript", level: 90},
-    {name: "TypeScript", level: 85},
-    {name: "React", level: 70},
-    {name: "Node.js", level: 75},
-    {name: "CSS", level: 90},
-    {name: "HTML", level: 95},
-    {name: "Python", level: 70},
+    {name: "JavaScript", level: 90, icon: "simple-icons:javascript"},
+    {name: "TypeScript", level: 85, icon: "simple-icons:typescript"},
+    {name: "React", level: 70, icon: "simple-icons:react"},
+    {name: "Node.js", level: 75, icon: "simple-icons:nodedotjs"},
+    {name: "CSS", level: 90, icon: "simple-icons:css3"},
+    {name: "HTML", level: 95, icon: "simple-icons:html5"},
+    {name: "Python", level: 70, icon: "simple-icons:python"},
 ];
 
 const hobbies = [
@@ -90,11 +91,16 @@ export default function About() {
                                             transition={{delay: index * 0.1 + 0.5}}
                                         >
                                             <div className="flex justify-between mb-2">
-                        <span className="text-white/80">
-                          {t(`about.skills.names.${skill.name}`, {
-                              defaultValue: skill.name,
-                          })}
-                        </span>
+                                                <div className={"flex items-center space-x-2"}>
+                                                <Icon
+                                                    icon={skill.icon}
+                                                    className="w-6 h-6 text-white"
+                                                    aria-label={`${skill.name} logo`}
+                                                />
+                                                <span className="text-white/80">
+                                                    {skill.name}
+                                                </span>
+                                                </div>
                                                 <motion.span
                                                     className="text-white/60"
                                                     animate={{opacity: [0.6, 1, 0.6]}}
@@ -127,7 +133,7 @@ export default function About() {
                         </FadeInSection>
                     </div>
                     <FadeInSection direction="up" delay={0.5} className="mb-16">
-                        <GlassCard className="mb-16 p-8">
+                        <GlassCard className="p-8 bg-white/10 shadow-lg">
                             <motion.div
                                 className="flex items-center mb-8"
                                 whileHover={{x: 5}}
@@ -137,21 +143,21 @@ export default function About() {
                                     animate={{rotate: [0, 10, -10, 0]}}
                                     transition={{repeat: Infinity, duration: 4, delay: 1}}
                                 >
-                                    <BriefcaseIcon className="w-7 h-7 text-blue-400 mr-3"/>
+                                    <BriefcaseIcon className="w-7 h-7 text-blue-400 mr-3" />
                                 </motion.div>
                                 <h3 className="text-2xl font-bold text-white">
                                     {t("about.experiences.title")}
                                 </h3>
                             </motion.div>
-                            <div className="space-y-6">
+                            <div className="space-y-8">
                                 {experiences.map((exp, index) => (
                                     <motion.div
                                         key={index}
                                         initial={{opacity: 0, x: -30}}
                                         whileInView={{opacity: 1, x: 0}}
                                         viewport={{once: true}}
-                                        transition={{duration: 0.6, delay: index * 0.15}}
-                                        className="border-l-2 border-blue-400/30 pl-6 relative group"
+                                        transition={{duration: 0.6, delay: index * 0.2}}
+                                        className="border-l-4 border-blue-400/50 pl-4 md:pl-6 relative group"
                                         whileHover={{x: 10, scale: 1.02}}
                                     >
                                         <motion.div
@@ -160,31 +166,26 @@ export default function About() {
                                                 scale: [1, 1.2, 1],
                                                 boxShadow: [
                                                     "0 0 0px rgba(59, 130, 246, 0)",
-                                                    "0 0 20px rgba(59, 130, 246, 0.8)",
+                                                    "0 0 10px rgba(59, 130, 246, 0.5)",
                                                     "0 0 0px rgba(59, 130, 246, 0)",
                                                 ],
                                             }}
-                                            transition={{repeat: Infinity, duration: 2, delay: index * 0.5 + 2}}
+                                            transition={{repeat: Infinity, duration: 1.5, delay: index * 0.5 + 2}}
                                         />
-                                        <div
-                                            className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                                        <div className="flex flex-col md:flex-row md:items-center md:justify-between my-2">
                                             <h4 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
                                                 {exp.title}
                                             </h4>
                                             <motion.span
-                                                className="text-blue-300 text-sm"
+                                                className="text-blue-300 text-sm md:text-base"
                                                 animate={{opacity: [0.7, 1, 0.7]}}
-                                                transition={{
-                                                    repeat: Infinity,
-                                                    duration: 3,
-                                                    delay: index * 0.3,
-                                                }}
+                                                transition={{repeat: Infinity, duration: 3, delay: index * 0.3}}
                                             >
                                                 {exp.date}
                                             </motion.span>
                                         </div>
-                                        <p className="text-blue-200 font-medium mb-2">{exp.company}</p>
-                                        <p className="text-white/70">{exp.description}</p>
+                                        <p className="text-blue-300 font-semibold mb-2">{exp.company}</p>
+                                        <p className="text-white/80 text-sm md:text-base">{exp.description}</p>
                                     </motion.div>
                                 ))}
                             </div>

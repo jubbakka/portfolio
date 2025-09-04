@@ -63,35 +63,36 @@
     "title": "Über mich",
     "subtitle": "Erfahren Sie mehr über meinen Werdegang und meine Leidenschaften",
     "profile": {
-      "job_title": "Full Stack Entwickler",
-      "description": "Ein Liebhaber von Code und nahtlosen Schnittstellen, verwandle ich Ideen in moderne, zugängliche Anwendungen. Immer neugierig, jongliere ich mit Technologien, um unvergessliche Erlebnisse zu schaffen. Technische Herausforderung? Ich bin dabei!"
+      "job_title": "Full Stack Ingenieur",
+      "description": "Absolvent der EPITA (2024), einer renommierten französischen Ingenieursschule für Informatik, erstelle ich flüssige Apps mit React, Vue.js, Node.js und Django. Ich habe einen Pipeline-Editor (Vue.js), eine umweltfreundliche B2C-App (React Native/Go), ein Intranet (Django) und einen im Gange befindlichen E-Commerce (React/Node) entwickelt. Technische Herausforderung? Ich liebe sie! Bereit zur Zusammenarbeit? Kontaktieren Sie mich! "
     },
     "skills": {
       "title": "Was ich beherrsche"
     },
     "experiences": {
-      "title": "Berufserfahrung",
+      "title": "Berufserfahrungen",
       "items": [
         {
           "title": "Business Analyst",
-          "company": "NEOSIS",
+          "company": "NEOSIS - Pully, Schweiz",
           "date": "10.2024 - Heute",
-          "description": "Bedarfsanalyse, Erstellung funktionaler Spezifikationen, Projektmanagement nach Agile/Scrum-Methodik, mit Fokus auf Zusatzleistungen des 1. Pfeilers für das Produkt iPension."
+          "description": "Ich habe mit externen Fachreferenten (Endbenutzern von iPension) zusammengearbeitet, um ihre Bedürfnisse und bestehenden Prozesse zu verstehen. Analyse der bestehenden Anwendung (iPension 1st), Fehleranalyse im PC-Thema und kontinuierliche Prozessoptimierung. Erstellung detaillierter funktionaler Spezifikationen für die Umsetzung neuer Funktionen. Konzeption und Betreuung von Funktionen, die die Bearbeitung von Ergänzungsleistungsdossiers vereinfachen und gleichzeitig die Einhaltung gesetzlicher Vorgaben gewährleisten. Optimierung und Vereinfachung bestehender Prozesse."
         },
         {
-          "title": "Fullstack Entwickler - Abschlusspraktikum",
-          "company": "ELCA",
+          "title": "Fullstack-Ingenieur – Abschlusspraktikum",
+          "company": "ELCA - Pully, Schweiz",
           "date": "03.2024 - 08.2024",
-          "description": "Entwicklung eines Moduls für ein Kundenportal eines Energieversorgers. Verwendung von Drupal und TailwindCSS."
+          "description": "Ich habe ein Modul zur Nachverfolgung des Stromverbrauchs für ein Kundenportal mit Drupal und TailwindCSS entwickelt, das die Analyse von Verbrauchsgewohnheiten und Optimierungsvorschläge integriert. In Zusammenarbeit mit den Produktteams habe ich ergonomische Oberflächen entworfen und so die Erfahrung für mehr als 14.000 Kunden verbessert."
         },
         {
-          "title": "Fullstack Entwickler - Praktikum",
-          "company": "EfficientIP",
+          "title": "Fullstack-Ingenieur – Praktikum",
+          "company": "EfficientIP - La Défense, Frankreich",
           "date": "09.2022 - 03.2023",
-          "description": "Verwaltung und Entwicklung von Funktionen für ein internes CRM, Verwendung von Python Flask und React."
+          "description": "Ich habe die Entwicklung des internen CRM weitergeführt: neue Funktionen implementiert, Fehler behoben, die Leistung optimiert und das Fehlermanagement verbessert. Zudem habe ich Schutzmechanismen eingeführt, um die Anwendung abzusichern und zu stabilisieren. Nutzung von Python (Flask) für das Backend. Beitrag zur Verbesserung der Zuverlässigkeit und Effizienz des internen CRM."
         }
       ]
     },
+
     "hobbies": {
       "title": "Was mich begeistert",
       "photography": {

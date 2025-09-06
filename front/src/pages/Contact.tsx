@@ -6,6 +6,7 @@ import {GlassCard} from "../components/ui/glass-card";
 import {useState} from "react";
 import {useToast} from "../hooks/use-toast";
 import {SectionTitle} from "../components/ui/section-title.tsx";
+import {useEffect} from "react";
 
 interface ContactForm {
     name: string;
@@ -15,7 +16,7 @@ interface ContactForm {
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const {t} = useTranslation();
+    const {t, i18n} = useTranslation();
     const {toast} = useToast();
     const {
         register,
@@ -25,6 +26,10 @@ export default function Contact() {
     } = useForm<ContactForm>();
 
     const API = import.meta.env.VITE_API_URL ?? "";
+
+    useEffect(() => {
+        reset(undefined, { keepValues: true });
+    }, [i18n.language, reset]);
 
     const onSubmit = async (data: ContactForm) => {
         try {
@@ -147,7 +152,7 @@ export default function Contact() {
                                 </label>
                                 <input
                                     id="name"
-                                    {...register("name", {required: "Le nom est requis"})}
+                                    {...register("name", {required: t('contact.errors.nameRequired')})}
                                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
                                     placeholder={t('contact.form.namePlaceholder')}
                                     aria-describedby={errors.name ? "name-error" : undefined}

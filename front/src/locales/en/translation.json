@@ -64,34 +64,35 @@
     "subtitle": "Discover my journey and passions",
     "profile": {
       "job_title": "Full Stack Developer",
-      "description": "A lover of code and seamless interfaces, I turn ideas into modern, accessible applications. Always curious, I juggle technologies to create memorable experiences. Technical challenge? I’m all in!"
+      "description": "I’m Julien, a full-stack developer passionate about coding since I was 15. Graduated from EPITA (2024), I build modern apps with React, Vue.js, Node.js, and Django. I’ve created a pipeline editor, an eco-friendly B2C app, an intranet, and I’m now developing an e-commerce platform. Sports taught me discipline and perseverance, values I apply to my projects. Always eager for new technical challenges, I’m ready to collaborate!"
     },
     "skills": {
       "title": "What I master"
     },
     "experiences": {
-      "title": "Professional Experience",
+      "title": "Professional Experiences",
       "items": [
         {
           "title": "Business Analyst",
-          "company": "NEOSIS",
+          "company": "NEOSIS - Pully, Switzerland",
           "date": "10.2024 - Present",
-          "description": "Needs analysis, writing functional specifications, project management using Agile/Scrum methodology, focusing on complementary benefits of the 1st pillar for the iPension product."
+          "description": "Collaborated with external business stakeholders (iPension end users) to understand their needs and existing processes. Analyzed the legacy application (iPension 1st), investigated bugs related to the PC theme, and continuously optimized workflows. Authored detailed functional specifications for new features. Designed and monitored functionalities simplifying the management of complementary benefits files while ensuring compliance with legal requirements. Streamlined and improved existing processes."
         },
         {
           "title": "Fullstack Developer - Final Internship",
-          "company": "ELCA",
+          "company": "ELCA - Pully, Switzerland",
           "date": "03.2024 - 08.2024",
-          "description": "Developed a module for a client portal of an energy provider. Used Drupal and TailwindCSS."
+          "description": "Developed an energy consumption tracking module for a client portal using Drupal and TailwindCSS, integrating usage pattern analysis and optimization suggestions. In collaboration with product teams, designed ergonomic interfaces, enhancing the experience for over 14,000 clients."
         },
         {
           "title": "Fullstack Developer - Internship",
-          "company": "EfficientIP",
+          "company": "EfficientIP - La Défense, France",
           "date": "09.2022 - 03.2023",
-          "description": "Managed and developed features for an internal CRM, using Python Flask and React."
+          "description": "Developed the internal CRM: implemented new features, fixed bugs, optimized performance, and improved error handling. Introduced safeguards to secure and stabilize the application. Backend built with Python (Flask). Contributed to improving the reliability and efficiency of the internal CRM."
         }
       ]
     },
+
     "hobbies": {
       "title": "What makes me tick",
       "photography": {

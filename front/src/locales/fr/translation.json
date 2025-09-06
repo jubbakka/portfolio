@@ -76,19 +76,19 @@
           "title": "Business Analyst",
           "company": "NEOSIS - Pully, Suisse",
           "date": "10.2024 - Présent",
-          "description": "J'ai collaboré avec des référents métiers externes (utilisateurs finaux d'iPension) pour comprendre leurs besoins et leurs processus existants. Étude de l'application existante (iPension 1st), analyse de bugs sur le theme PC et optimisations continues des processus. Rédaction de spécifications fonctionnelles détaillées pour la mise en place de nouvelles fonctionnalités. Conception et suivi de fonctionnalités simplifiant le traitement des dossiers des prestations complémentaires, tout en garantissant la conformité aux directives légales. Optimisation et simplification des processus existants."
+          "description": "Collaboration avec des référents métiers externes (utilisateurs finaux d'iPension) pour comprendre leurs besoins et leurs processus existants. Étude de l'application existante (iPension 1st), analyse de bugs sur le theme PC et optimisations continues des processus. Rédaction de spécifications fonctionnelles détaillées pour la mise en place de nouvelles fonctionnalités. Conception et suivi de fonctionnalités simplifiant le traitement des dossiers des prestations complémentaires, tout en garantissant la conformité aux directives légales. Optimisation et simplification des processus existants."
         },
         {
           "title": "Développeur Fullstack - Stage de fin d'études",
           "company": "ELCA - Pully, Suisse",
           "date": "03.2024 - 08.2024",
-          "description": "J’ai développé un module de suivi de consommation électrique pour un portail client avec Drupal et TailwindCSS, intégrant l’analyse des habitudes de consommation et des suggestions d’optimisation. En partenariat avec les équipes produit, j’ai conçu des interfaces ergonomiques, améliorant l’expérience pour plus de 14'000 clients."
+          "description": "Développement d'un module de suivi de consommation électrique pour un portail client avec Drupal et TailwindCSS, intégrant l’analyse des habitudes de consommation et des suggestions d’optimisation. En partenariat avec les équipes produit, j’ai conçu des interfaces ergonomiques, améliorant l’expérience pour plus de 14'000 clients."
         },
         {
           "title": "Développeur Fullstack - Stage",
           "company": "EfficientIP - La Defense, France",
           "date": "09.2022 - 03.2023",
-          "description": "J'ai poursuivi le developpement du CRM interne : implémentation de nouvelles fonctionnalités, correction de bugs, optimisation des performances et amélioration de la gestion des erreurs. De plus j'ai pu mettre en place des   garde-fous pour sécuriser et stabiliser l'application. Utilisation de Python (Flask) pour le backend. Contribution à l'amélioration de la fiabilité et de l'efficacité du CRM interne."
+          "description": "Developpement du CRM interne : implémentation de nouvelles fonctionnalités, correction de bugs, optimisation des performances et amélioration de la gestion des erreurs. De plus j'ai pu mettre en place des   garde-fous pour sécuriser et stabiliser l'application. Utilisation de Python (Flask) pour le backend. Contribution à l'amélioration de la fiabilité et de l'efficacité du CRM interne."
         }
       ]
     },

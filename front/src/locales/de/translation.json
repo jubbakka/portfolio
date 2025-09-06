@@ -76,21 +76,22 @@
           "title": "Business Analyst",
           "company": "NEOSIS - Pully, Schweiz",
           "date": "10.2024 - Heute",
-          "description": "Ich habe mit externen Fachreferenten (Endbenutzern von iPension) zusammengearbeitet, um ihre Bedürfnisse und bestehenden Prozesse zu verstehen. Analyse der bestehenden Anwendung (iPension 1st), Fehleranalyse im PC-Thema und kontinuierliche Prozessoptimierung. Erstellung detaillierter funktionaler Spezifikationen für die Umsetzung neuer Funktionen. Konzeption und Betreuung von Funktionen, die die Bearbeitung von Ergänzungsleistungsdossiers vereinfachen und gleichzeitig die Einhaltung gesetzlicher Vorgaben gewährleisten. Optimierung und Vereinfachung bestehender Prozesse."
+          "description": "Zusammenarbeit mit externen Fachvertretern (iPension-Endnutzer), um deren Bedürfnisse und bestehende Prozesse zu verstehen. Analyse der bestehenden Anwendung (iPension 1st), Untersuchung von Fehlern im PC-Thema und kontinuierliche Prozessoptimierung. Erstellung detaillierter funktionaler Spezifikationen für neue Funktionen. Konzeption und Betreuung von Features zur Vereinfachung der Bearbeitung von Ergänzungsleistungs-Dossiers bei gleichzeitiger Einhaltung gesetzlicher Vorgaben. Optimierung und Vereinfachung bestehender Abläufe."
         },
         {
           "title": "Fullstack-Ingenieur – Abschlusspraktikum",
           "company": "ELCA - Pully, Schweiz",
           "date": "03.2024 - 08.2024",
-          "description": "Ich habe ein Modul zur Nachverfolgung des Stromverbrauchs für ein Kundenportal mit Drupal und TailwindCSS entwickelt, das die Analyse von Verbrauchsgewohnheiten und Optimierungsvorschläge integriert. In Zusammenarbeit mit den Produktteams habe ich ergonomische Oberflächen entworfen und so die Erfahrung für mehr als 14.000 Kunden verbessert."
+          "description": "Entwicklung eines Moduls zur Überwachung des Stromverbrauchs für ein Kundenportal mit Drupal und TailwindCSS, inklusive Analyse des Nutzungsverhaltens und Optimierungsvorschlägen. In Zusammenarbeit mit den Produktteams wurden ergonomische Benutzeroberflächen entworfen, die das Erlebnis für über 14.000 Kunden verbesserten."
         },
         {
           "title": "Fullstack-Ingenieur – Praktikum",
           "company": "EfficientIP - La Défense, Frankreich",
           "date": "09.2022 - 03.2023",
-          "description": "Ich habe die Entwicklung des internen CRM weitergeführt: neue Funktionen implementiert, Fehler behoben, die Leistung optimiert und das Fehlermanagement verbessert. Zudem habe ich Schutzmechanismen eingeführt, um die Anwendung abzusichern und zu stabilisieren. Nutzung von Python (Flask) für das Backend. Beitrag zur Verbesserung der Zuverlässigkeit und Effizienz des internen CRM."
+          "description": "Weiterentwicklung des internen CRM: Implementierung neuer Funktionen, Behebung von Fehlern, Performance-Optimierung und Verbesserung des Fehlerhandlings. Einführung von Schutzmechanismen zur Absicherung und Stabilisierung der Anwendung. Backend mit Python (Flask). Beitrag zur Steigerung der Zuverlässigkeit und Effizienz des internen CRM."
         }
       ]
+
     },
 
     "hobbies": {

@@ -1,6 +1,6 @@
 // src/i18n.ts
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import {initReactI18next} from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 import translationFR from "./locales/fr/translation.json";
@@ -8,9 +8,9 @@ import translationEN from "./locales/en/translation.json";
 import translationDE from "./locales/de/translation.json";
 
 const resources = {
-    fr: { translation: translationFR },
-    en: { translation: translationEN },
-    de: { translation: translationDE },
+    fr: {translation: translationFR},
+    en: {translation: translationEN},
+    de: {translation: translationDE},
 };
 
 i18n
@@ -25,10 +25,9 @@ i18n
         detection: {
             order: ["localStorage", "htmlTag", "navigator"],
             caches: ["localStorage"],
-            lookupLocalStorage: "lang", // ← aligne avec ton switcher
+            lookupLocalStorage: "lang",
         },
-        interpolation: { escapeValue: false },
-        react: { useSuspense: false },
+        interpolation: {escapeValue: false},
+        react: {useSuspense: false},
     });
-
 export default i18n;

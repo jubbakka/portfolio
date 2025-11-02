@@ -114,12 +114,49 @@
       }
     }
   },
+  "projects": {
+    "title": "Meine Projekte",
+    "subtitle": "Entdecken Sie meine Arbeiten und Projekte",
+    "categories": {
+      "all": "Alle",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack",
+      "mobile": "Mobile"
+    },
+    "buttons": {
+      "code": "Code",
+      "demo": "Vorschau"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Portfolio",
+        "description": "Moderne und responsive Portfolio-Website, entwickelt mit React und TypeScript. Präsentation meiner Projekte, Fähigkeiten und meines Werdegangs mit einer eleganten Benutzeroberfläche unter Verwendung von Tailwind CSS und flüssigen Animationen mit Framer Motion. Integration eines Kontaktsystems mit sicherem Express-Backend."
+      },
+      {
+        "id": 2,
+        "title": "CHUV-Planungsdigitalisierer",
+        "description": "Webanwendung für CHUV-Mitarbeiter zur Umwandlung von Papierplänen in digitale .ics-Dateien. Ermöglicht das Erstellen einer leeren Tabelle, manuelles Ausfüllen von Planungscodes (J, N, X...) und den Export des Kalenders. Mehrsprachige Benutzeroberfläche mit lokaler Speicherung."
+      },
+      {
+        "id": 3,
+        "title": "API Factory - Versicherungsverwaltung",
+        "description": "RESTful-API zur Verwaltung von Kunden und Verträgen einer Versicherungsgesellschaft, entwickelt mit Spring Boot. Vollständige Implementierung mit Soft Delete, robuster Validierung, globalisiertem Fehlerhandling und modularer Architektur. H2-Datenbank mit Seeding-Unterstützung für Tests."
+      },
+      {
+        "id": 4,
+        "title": "Bomberman - JWS 2024",
+        "description": "Bomberman-Spielimplementierung in Java für das JWS 2024-Projekt. Entwicklung eines Mehrspielerspiels mit Bombenverwaltung, Blockzerstörbarkeit, Power-up-System und vollständigen Spielmechaniken."
+      }
+    ]
+  },
   "wip": {
     "title": {
       "part1": "Seite",
       "part2": "im Bau"
     },
-    "subtitle": "Dieser Abschnitt ist noch nicht fertig – ich finalisiere ihn bald.",
+    "subtitle": "Dieser Abschnitt ist noch nicht fertig — ich finalisiere ihn bald.",
     "lede": "Hier entsteht etwas Schönes.",
     "body": "Durchdachte Schnittstelle, flüssige Interaktionen, nützliche Funktionen. Brauchen Sie schnell Infos? Kontaktieren Sie mich.",
     "progress": {

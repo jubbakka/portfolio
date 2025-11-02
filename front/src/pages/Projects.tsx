@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { SectionTitle } from "../components/ui/section-title";
 import { GlassCard } from "../components/ui/glass-card";
 
-const projects = [
+const projectConfigs = [
     {
         id: 1,
-        title: "Portfolio",
-        description: "Site web portfolio moderne et responsive développé avec React et TypeScript. Mise en avant de mes projets, compétences et parcours avec une interface élégante utilisant Tailwind CSS et des animations fluides avec Framer Motion. Intégration d'un système de contact avec backend Express sécurisé.",
         image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop&q=80",
         technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "Express", "Node.js"],
         category: "fullstack",
@@ -17,8 +16,6 @@ const projects = [
     },
     {
         id: 2,
-        title: "Digitaliseur de planning pour le CHUV",
-        description: "Application web dédiée aux employés du CHUV pour transformer les plannings papier en fichiers .ics numériques. Permet de créer un tableau vierge, remplir manuellement les codes de planning (J, N, X...), et exporter le calendrier. Interface multilingue avec sauvegarde locale.",
         image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop&q=80",
         technologies: ["TypeScript", "React", "Vite", "Tailwind CSS"],
         category: "frontend",
@@ -27,8 +24,6 @@ const projects = [
     },
     {
         id: 3,
-        title: "API Factory - Gestion d'assurance",
-        description: "API RESTful pour la gestion de clients et contrats d'une compagnie d'assurance, développée avec Spring Boot. Implémentation complète avec soft delete, validation robuste, gestion d'erreurs globalisée et architecture modulaire. Base de données H2 avec support de seeding pour les tests.",
         image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80",
         technologies: ["Java", "Spring Boot", "H2 Database", "Maven", "REST API"],
         category: "backend",
@@ -37,8 +32,6 @@ const projects = [
     },
     {
         id: 4,
-        title: "Bomberman - JWS 2024",
-        description: "Implémentation du jeu Bomberman en Java dans le cadre du projet JWS 2024. Développement d'un jeu multijoueur avec gestion des bombes, destructibilité des blocs, système de puissance et mécaniques de jeu complètes.",
         image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop&q=80",
         technologies: ["Java", "Quarkus", "REST API"],
         category: "backend",
@@ -47,16 +40,37 @@ const projects = [
     },
 ];
 
-const categories = [
-    { id: "all", name: "Tous" },
-    { id: "frontend", name: "Frontend" },
-    { id: "backend", name: "Backend" },
-    { id: "fullstack", name: "Fullstack" },
-    { id: "mobile", name: "Mobile" }
-];
-
 export const Projects = () => {
+    const { t } = useTranslation();
     const [selectedCategory, setSelectedCategory] = useState("all");
+
+    const projects = useMemo(() => {
+        const translatedProjects = t("projects.items", { returnObjects: true }) as Array<{
+            id: number;
+            title: string;
+            description: string;
+            technologies: string[];
+            category: string;
+        }>;
+        
+        return translatedProjects.map((project) => {
+            const config = projectConfigs.find((c) => c.id === project.id);
+            return {
+                ...project,
+                ...config,
+            };
+        });
+    }, [t]);
+
+    const categories = useMemo(() => {
+        const catNames = t("projects.categories", { returnObjects: true }) as Record<string, string>;
+        return [
+            { id: "all", name: catNames.all },
+            { id: "frontend", name: catNames.frontend },
+            { id: "backend", name: catNames.backend },
+            { id: "fullstack", name: catNames.fullstack }
+        ];
+    }, [t]);
 
     const filteredProjects = projects.filter(
         project => selectedCategory === "all" || project.category === selectedCategory
@@ -65,8 +79,8 @@ export const Projects = () => {
     return (
         <div className="min-h-screen px-4 pt-32 pb-16">
             <div className="max-w-6xl mx-auto">
-                <SectionTitle subtitle="Découvrez mes réalisations et projets">
-                    Mes Projets
+                <SectionTitle subtitle={t("projects.subtitle")}>
+                    {t("projects.title")}
                 </SectionTitle>
 
                 {/* Filtres */}
@@ -151,7 +165,7 @@ export const Projects = () => {
                                                     className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
                                                 >
                                                     <Github size={20} />
-                                                    <span>Code</span>
+                                                    <span>{t("projects.buttons.code")}</span>
                                                 </motion.a>
                                             )}
                                             {project.demo && (
@@ -164,7 +178,7 @@ export const Projects = () => {
                                                     className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
                                                 >
                                                     <ExternalLink size={20} />
-                                                    <span>Demo</span>
+                                                    <span>{t("projects.buttons.demo")}</span>
                                                 </motion.a>
                                             )}
                                         </div>

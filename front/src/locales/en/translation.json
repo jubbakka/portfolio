@@ -113,13 +113,50 @@
       }
     }
   },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Discover my work and projects",
+    "categories": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack",
+      "mobile": "Mobile"
+    },
+    "buttons": {
+      "code": "Code",
+      "demo": "Demo"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Portfolio",
+        "description": "Modern and responsive portfolio website developed with React and TypeScript. Showcasing my projects, skills and journey with an elegant interface using Tailwind CSS and smooth animations with Framer Motion. Integration of a contact system with a secure Express backend."
+      },
+      {
+        "id": 2,
+        "title": "CHUV Schedule Digitizer",
+        "description": "Web application dedicated to CHUV employees to transform paper schedules into digital .ics files. Allows creating a blank table, manually filling schedule codes (J, N, X...), and exporting the calendar. Multilingual interface with local storage."
+      },
+      {
+        "id": 3,
+        "title": "API Factory - Insurance Management",
+        "description": "RESTful API for managing clients and contracts of an insurance company, developed with Spring Boot. Complete implementation with soft delete, robust validation, globalized error handling and modular architecture. H2 database with seeding support for tests."
+      },
+      {
+        "id": 4,
+        "title": "Bomberman - JWS 2024",
+        "description": "Bomberman game implementation in Java for the JWS 2024 project. Development of a multiplayer game with bomb management, block destructibility, power-up system and complete game mechanics."
+      }
+    ]
+  },
   "wip": {
     "title": {
       "part1": "Page",
       "part2": "under construction"
     },
-    "subtitle": "This section isn’t complete yet — I’m finalizing it soon.",
-    "lede": "We’re building something sleek here.",
+    "subtitle": "This section isn't complete yet — I'm finalizing it soon.",
+    "lede": "We're building something sleek here.",
     "body": "Polished interface, smooth interactions, useful features. Need info quickly? Contact me.",
     "progress": {
       "label": "Progress",
@@ -130,7 +167,7 @@
       "back": "Back to home",
       "contact": "Contact me"
     },
-    "footer": "Want to be notified when it’s live? Drop me a line.",
+    "footer": "Want to be notified when it's live? Drop me a line.",
     "term": {
       "compile": "Compiling the UI…",
       "images": "Optimizing images…",

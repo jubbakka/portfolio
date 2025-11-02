@@ -112,29 +112,66 @@
       }
     }
   },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations et projets",
+    "categories": {
+      "all": "Tous",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "fullstack": "Fullstack",
+      "mobile": "Mobile"
+    },
+    "buttons": {
+      "code": "Code",
+      "demo": "Démo"
+    },
+    "items": [
+      {
+        "id": 1,
+        "title": "Portfolio",
+        "description": "Site web portfolio moderne et responsive développé avec React et TypeScript. Mise en avant de mes projets, compétences et parcours avec une interface élégante utilisant Tailwind CSS et des animations fluides avec Framer Motion. Intégration d'un système de contact avec backend Express sécurisé."
+      },
+      {
+        "id": 2,
+        "title": "Digitaliseur de planning pour le CHUV",
+        "description": "Application web dédiée aux employés du CHUV pour transformer les plannings papier en fichiers .ics numériques. Permet de créer un tableau vierge, remplir manuellement les codes de planning (J, N, X...), et exporter le calendrier. Interface multilingue avec sauvegarde locale."
+      },
+      {
+        "id": 3,
+        "title": "API Factory - Gestion d'assurance",
+        "description": "API RESTful pour la gestion de clients et contrats d'une compagnie d'assurance, développée avec Spring Boot. Implémentation complète avec soft delete, validation robuste, gestion d'erreurs globalisée et architecture modulaire. Base de données H2 avec support de seeding pour les tests."
+      },
+      {
+        "id": 4,
+        "title": "Bomberman - JWS 2024",
+        "description": "Implémentation du jeu Bomberman en Java dans le cadre du projet JWS 2024. Développement d'un jeu multijoueur avec gestion des bombes, destructibilité des blocs, système de puissance et mécaniques de jeu complètes."
+      }
+    ]
+  },
   "wip": {
     "title": {
       "part1": "Page",
       "part2": "en travaux"
     },
-    "subtitle": "Cette section n’est pas encore complète — je la finalise très bientôt.",
+    "subtitle": "Cette section n'est pas encore complète — je la finalise très bientôt.",
     "lede": "On prépare un truc propre ici.",
-    "body": "Interface soignée, interactions fluides, fonctionnalités utiles. Besoin d’une info rapidement ? Contacte-moi.",
+    "body": "Interface soignée, interactions fluides, fonctionnalités utiles. Besoin d'une info rapidement ? Contacte-moi.",
     "progress": {
       "label": "Avancement",
       "status": "en cours",
       "aria": "{{value}}% terminé"
     },
     "cta": {
-      "back": "Retour à l’accueil",
+      "back": "Retour à l'accueil",
       "contact": "Me contacter"
     },
-    "footer": "Tu veux être prévenu quand c’est en ligne ? Écris-moi.",
+    "footer": "Tu veux être prévenu quand c'est en ligne ? Écris-moi.",
     "term": {
-      "compile": "Compilation de l’UI…",
+      "compile": "Compilation de l'UI…",
       "images": "Optimisation des images…",
       "api": "Câblage des routes API…",
-      "deploy": "Déploiement de l’aperçu…",
+      "deploy": "Déploiement de l'aperçu…",
       "status": "Statut : En cours…"
     }
   }
